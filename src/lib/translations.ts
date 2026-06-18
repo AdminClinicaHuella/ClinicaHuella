@@ -1,0 +1,186 @@
+export type Lang = "es" | "en";
+
+export const translations = {
+  es: {
+    nav: {
+      home: "Inicio",
+      services: "Servicios",
+      about: "Sobre Nosotros",
+      team: "Equipo",
+      contact: "Contacto",
+      cta: "Pedir Cita",
+    },
+    hero: {
+      eyebrow: "Clínica Veterinaria Huella",
+      title: "Cuidamos a tu mejor amigo",
+      subtitle:
+        "Atención veterinaria con corazón. Más de 15 años brindando salud, cariño y confianza a tu mascota.",
+      cta: "Pedir Cita",
+      ctaSecondary: "Nuestros Servicios",
+    },
+    services: {
+      title: "Nuestros Servicios",
+      subtitle: "Todo lo que tu mascota necesita, en un solo lugar",
+      items: [
+        { title: "Consulta General", desc: "Revisiones completas para mantener a tu mascota saludable." },
+        { title: "Vacunación", desc: "Plan completo de vacunas para perros, gatos y exóticos." },
+        { title: "Cirugía", desc: "Quirófano equipado con tecnología moderna y monitoreo." },
+        { title: "Odontología", desc: "Limpieza, extracciones y cuidado dental profesional." },
+        { title: "Emergencias 24/7", desc: "Atención urgente cuando más lo necesitas." },
+        { title: "Peluquería", desc: "Baño, corte y estética para que luzcan increíbles." },
+      ],
+    },
+    about: {
+      title: "Sobre Huella",
+      subtitle: "Más que una clínica, una familia",
+      body:
+        "Desde 2009, en Huella creemos que cada mascota merece el mejor cuidado. Nuestro equipo combina experiencia, tecnología y un trato cercano para que tu compañero peludo se sienta como en casa.",
+      values: [
+        { title: "Cuidado", desc: "Trato amoroso y respetuoso con cada paciente." },
+        { title: "Confianza", desc: "Transparencia en cada diagnóstico y tratamiento." },
+        { title: "Experiencia", desc: "Profesionales certificados con años de práctica." },
+      ],
+    },
+    team: {
+      title: "Conoce a Nuestro Equipo",
+      subtitle: "Veterinarios apasionados por los animales",
+      members: [
+        { name: "Dra. María González", role: "Directora · Medicina Interna" },
+        { name: "Dr. Carlos Ruiz", role: "Cirujano Veterinario" },
+        { name: "Dra. Laura Méndez", role: "Dermatología y Felinos" },
+        { name: "Dr. Andrés Soto", role: "Emergencias y Cuidados Críticos" },
+      ],
+    },
+    why: {
+      title: "¿Por qué elegirnos?",
+      items: [
+        { title: "Emergencias 24/7", desc: "Disponibles cuando nos necesites." },
+        { title: "Equipo Experimentado", desc: "Veterinarios certificados y empáticos." },
+        { title: "Equipo Moderno", desc: "Tecnología de última generación." },
+        { title: "Trato con Amor", desc: "Tu mascota como prioridad." },
+      ],
+    },
+    testimonials: {
+      title: "Lo que dicen nuestras familias",
+      items: [
+        { quote: "Cuidaron a mi gata como si fuera suya. Profesionales y muy cariñosos.", author: "Ana Pérez" },
+        { quote: "La mejor clínica de la ciudad. Salvaron a mi perro en una emergencia.", author: "Luis Martín" },
+        { quote: "Atención excepcional, ambiente cálido y precios justos. Súper recomendada.", author: "Sofía Romero" },
+      ],
+    },
+    contact: {
+      title: "Contáctanos",
+      subtitle: "Estamos aquí para ayudarte",
+      name: "Nombre",
+      email: "Correo electrónico",
+      phone: "Teléfono",
+      message: "Mensaje",
+      send: "Enviar mensaje",
+      sent: "¡Mensaje enviado! Te contactaremos pronto.",
+      address: "Av. Las Mascotas 123, Ciudad",
+      hours: "Lun – Sáb: 9:00 – 20:00 · Dom: Emergencias",
+      hoursLabel: "Horario",
+      addressLabel: "Dirección",
+      phoneLabel: "Teléfono",
+      emailLabel: "Email",
+    },
+    footer: {
+      tagline: "Cuidando a tu mejor amigo desde 2009.",
+      links: "Enlaces rápidos",
+      follow: "Síguenos",
+      rights: "Todos los derechos reservados.",
+    },
+  },
+  en: {
+    nav: {
+      home: "Home",
+      services: "Services",
+      about: "About Us",
+      team: "Team",
+      contact: "Contact",
+      cta: "Book Appointment",
+    },
+    hero: {
+      eyebrow: "Huella Veterinary Clinic",
+      title: "We care for your best friend",
+      subtitle:
+        "Veterinary care with heart. Over 15 years providing health, love and trust for your pet.",
+      cta: "Book Appointment",
+      ctaSecondary: "Our Services",
+    },
+    services: {
+      title: "Our Services",
+      subtitle: "Everything your pet needs, in one place",
+      items: [
+        { title: "General Consultation", desc: "Complete checkups to keep your pet healthy." },
+        { title: "Vaccinations", desc: "Full vaccination plans for dogs, cats and exotics." },
+        { title: "Surgery", desc: "Modern operating room with full monitoring." },
+        { title: "Dental Care", desc: "Cleaning, extractions and professional dental care." },
+        { title: "24/7 Emergencies", desc: "Urgent care when you need it most." },
+        { title: "Grooming", desc: "Bath, haircut and styling to look amazing." },
+      ],
+    },
+    about: {
+      title: "About Huella",
+      subtitle: "More than a clinic, a family",
+      body:
+        "Since 2009, at Huella we believe every pet deserves the best care. Our team blends experience, technology and a personal touch so your furry friend feels right at home.",
+      values: [
+        { title: "Care", desc: "Loving, respectful treatment for every patient." },
+        { title: "Trust", desc: "Transparency in every diagnosis and treatment." },
+        { title: "Experience", desc: "Certified professionals with years of practice." },
+      ],
+    },
+    team: {
+      title: "Meet Our Team",
+      subtitle: "Veterinarians passionate about animals",
+      members: [
+        { name: "Dr. María González", role: "Director · Internal Medicine" },
+        { name: "Dr. Carlos Ruiz", role: "Veterinary Surgeon" },
+        { name: "Dr. Laura Méndez", role: "Dermatology & Felines" },
+        { name: "Dr. Andrés Soto", role: "Emergency & Critical Care" },
+      ],
+    },
+    why: {
+      title: "Why choose us?",
+      items: [
+        { title: "24/7 Emergencies", desc: "Available whenever you need us." },
+        { title: "Experienced Team", desc: "Certified and empathetic vets." },
+        { title: "Modern Equipment", desc: "Latest generation technology." },
+        { title: "Loving Care", desc: "Your pet is our priority." },
+      ],
+    },
+    testimonials: {
+      title: "What our families say",
+      items: [
+        { quote: "They cared for my cat like their own. Professional and so warm.", author: "Ana Pérez" },
+        { quote: "Best clinic in town. They saved my dog in an emergency.", author: "Luis Martín" },
+        { quote: "Exceptional care, warm atmosphere and fair prices. Highly recommended.", author: "Sofía Romero" },
+      ],
+    },
+    contact: {
+      title: "Contact Us",
+      subtitle: "We're here to help",
+      name: "Name",
+      email: "Email",
+      phone: "Phone",
+      message: "Message",
+      send: "Send message",
+      sent: "Message sent! We'll be in touch soon.",
+      address: "123 Pet Avenue, City",
+      hours: "Mon – Sat: 9:00 – 20:00 · Sun: Emergencies",
+      hoursLabel: "Hours",
+      addressLabel: "Address",
+      phoneLabel: "Phone",
+      emailLabel: "Email",
+    },
+    footer: {
+      tagline: "Caring for your best friend since 2009.",
+      links: "Quick links",
+      follow: "Follow us",
+      rights: "All rights reserved.",
+    },
+  },
+} as const;
+
+export type Translations = typeof translations.es;
