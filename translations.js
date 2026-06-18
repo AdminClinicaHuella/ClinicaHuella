@@ -1,20 +1,11 @@
-export type Lang = "es" | "en";
-
-export const translations = {
+// Contenido bilingüe de Huella (ES / EN)
+const translations = {
   es: {
-    nav: {
-      home: "Inicio",
-      services: "Servicios",
-      about: "Sobre Nosotros",
-      team: "Equipo",
-      contact: "Contacto",
-      cta: "Pedir Cita",
-    },
+    nav: { home: "Inicio", services: "Servicios", about: "Sobre Nosotros", team: "Equipo", contact: "Contacto", cta: "Pedir Cita" },
     hero: {
       eyebrow: "Clínica Veterinaria Huella",
       title: "Cuidamos a tu mejor amigo",
-      subtitle:
-        "Atención veterinaria con corazón. Más de 15 años brindando salud, cariño y confianza a tu mascota.",
+      subtitle: "Atención veterinaria con corazón. Más de 15 años brindando salud, cariño y confianza a tu mascota.",
       cta: "Pedir Cita",
       ctaSecondary: "Nuestros Servicios",
     },
@@ -33,8 +24,7 @@ export const translations = {
     about: {
       title: "Sobre Huella",
       subtitle: "Más que una clínica, una familia",
-      body:
-        "Desde 2009, en Huella creemos que cada mascota merece el mejor cuidado. Nuestro equipo combina experiencia, tecnología y un trato cercano para que tu compañero peludo se sienta como en casa.",
+      body: "Desde 2009, en Huella creemos que cada mascota merece el mejor cuidado. Nuestro equipo combina experiencia, tecnología y un trato cercano para que tu compañero peludo se sienta como en casa.",
       values: [
         { title: "Cuidado", desc: "Trato amoroso y respetuoso con cada paciente." },
         { title: "Confianza", desc: "Transparencia en cada diagnóstico y tratamiento." },
@@ -76,7 +66,9 @@ export const translations = {
       phone: "Teléfono",
       message: "Mensaje",
       send: "Enviar mensaje",
+      sending: "Enviando...",
       sent: "¡Mensaje enviado! Te contactaremos pronto.",
+      error: "Hubo un problema al enviar. Inténtalo de nuevo o llámanos.",
       address: "Av. Las Mascotas 123, Ciudad",
       hours: "Lun – Sáb: 9:00 – 20:00 · Dom: Emergencias",
       hoursLabel: "Horario",
@@ -84,27 +76,14 @@ export const translations = {
       phoneLabel: "Teléfono",
       emailLabel: "Email",
     },
-    footer: {
-      tagline: "Cuidando a tu mejor amigo desde 2009.",
-      links: "Enlaces rápidos",
-      follow: "Síguenos",
-      rights: "Todos los derechos reservados.",
-    },
+    footer: { tagline: "Cuidando a tu mejor amigo desde 2009.", links: "Enlaces rápidos", follow: "Síguenos", rights: "Todos los derechos reservados." },
   },
   en: {
-    nav: {
-      home: "Home",
-      services: "Services",
-      about: "About Us",
-      team: "Team",
-      contact: "Contact",
-      cta: "Book Appointment",
-    },
+    nav: { home: "Home", services: "Services", about: "About Us", team: "Team", contact: "Contact", cta: "Book Appointment" },
     hero: {
       eyebrow: "Huella Veterinary Clinic",
       title: "We care for your best friend",
-      subtitle:
-        "Veterinary care with heart. Over 15 years providing health, love and trust for your pet.",
+      subtitle: "Veterinary care with heart. Over 15 years providing health, love and trust for your pet.",
       cta: "Book Appointment",
       ctaSecondary: "Our Services",
     },
@@ -123,8 +102,7 @@ export const translations = {
     about: {
       title: "About Huella",
       subtitle: "More than a clinic, a family",
-      body:
-        "Since 2009, at Huella we believe every pet deserves the best care. Our team blends experience, technology and a personal touch so your furry friend feels right at home.",
+      body: "Since 2009, at Huella we believe every pet deserves the best care. Our team blends experience, technology and a personal touch so your furry friend feels right at home.",
       values: [
         { title: "Care", desc: "Loving, respectful treatment for every patient." },
         { title: "Trust", desc: "Transparency in every diagnosis and treatment." },
@@ -166,7 +144,9 @@ export const translations = {
       phone: "Phone",
       message: "Message",
       send: "Send message",
+      sending: "Sending...",
       sent: "Message sent! We'll be in touch soon.",
+      error: "Something went wrong. Please try again or call us.",
       address: "123 Pet Avenue, City",
       hours: "Mon – Sat: 9:00 – 20:00 · Sun: Emergencies",
       hoursLabel: "Hours",
@@ -174,13 +154,6 @@ export const translations = {
       phoneLabel: "Phone",
       emailLabel: "Email",
     },
-    footer: {
-      tagline: "Caring for your best friend since 2009.",
-      links: "Quick links",
-      follow: "Follow us",
-      rights: "All rights reserved.",
-    },
+    footer: { tagline: "Caring for your best friend since 2009.", links: "Quick links", follow: "Follow us", rights: "All rights reserved." },
   },
-} as const;
-
-export type Translations = typeof translations.es;
+};
