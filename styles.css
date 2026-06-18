@@ -84,13 +84,20 @@ h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; }
   gap: 0.5rem; 
 }
 
+.nav-logo {
+  border-radius: 1000px;
+}
+
 .logo-mark {
-  display: grid; place-items: center; height: 2.5rem; width: 2.5rem; flex-shrink: 0;
-  border-radius: 1rem; background: var(--primary); color: var(--primary-foreground);
+  display: grid; 
+  place-items: center; 
+  height: 2.5rem; 
+  width: 2.5rem; 
+  flex-shrink: 0;
+  color: var(--primary-foreground);
   transition: transform 0.2s;
 }
-.logo-mark svg { height: 1.25rem; width: 1.25rem; }
-.logo:hover .logo-mark { transform: scale(1.05); }
+
 
 .logo-text { 
   font-size: clamp(1rem, 1vw, 1.25rem); 
@@ -182,7 +189,7 @@ h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; }
   color: var(--secondary-foreground);
   padding: 0.375rem 1rem; 
   font-size: clamp(4rem, 1vw, 10rem); 
-  font-weight: 600;
+  font-weight: 1000;
 
 }
 
@@ -211,6 +218,10 @@ h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; }
   object-fit: cover; 
   aspect-ratio: 4 / 3; 
 }
+
+
+
+
 
 /* ===== Sections ===== */
 .section { padding: 5rem 0; }
