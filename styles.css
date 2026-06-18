@@ -245,6 +245,13 @@ h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; }
 @media (min-width: 640px) { .section-header h2 { font-size: 2.5rem; } }
 @media (min-width: 1024px) { .section-header h2 { font-size: 3rem; } }
 
+
+
+
+
+
+
+
 /* ===== Cards grid (services) ===== */
 .cards-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
 @media (min-width: 640px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -263,6 +270,11 @@ h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; }
 .card h3 { margin-top: 1.25rem; font-size: 1.125rem; font-weight: 700; }
 .card p { margin-top: 0.5rem; font-size: 0.875rem; color: var(--muted-foreground); }
 
+
+
+
+
+
 /* ===== About ===== */
 .about-grid { display: grid; gap: 3rem; align-items: center; }
 @media (min-width: 1024px) { .about-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
@@ -278,21 +290,24 @@ h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; }
 .value-card .value-title { margin-top: 0.5rem; font-weight: 700; font-size: 0.875rem; }
 .value-card .value-desc { margin-top: 0.25rem; font-size: 0.75rem; color: var(--muted-foreground); }
 
+
+
+
+
 /* ===== Team ===== */
-.team-grid { 
-  display: grid; 
-  gap: 1.5rem; 
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   justify-content: center;
 }
 
-
-
-
-.team-card { 
-  border-radius: 1.5rem; 
-  background: var(--card); 
+.team-card {
+  border-radius: 1.5rem;
+  background: var(--card);
   border: 1px solid var(--border);
-  overflow: hidden;  
+  overflow: hidden;
+  width: 260px;
 }
 
 

@@ -9,7 +9,7 @@
 // ---- CONFIG: pega aquí tu endpoint de Formspree (Fase 2) ----
 // Mientras esté vacío, el formulario funciona en "modo demo"
 // (muestra el mensaje de éxito sin enviar nada).
-const FORMSPREE_ENDPOINT = ""; // ej: "https://formspree.io/f/xxxxxxx"
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvznjdvb"; // ej: "https://formspree.io/f/xxxxxxx"
 // -------------------------------------------------------------
 
 const STORAGE_KEY = "huella-lang";
