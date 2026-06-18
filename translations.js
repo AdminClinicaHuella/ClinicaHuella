@@ -1,11 +1,11 @@
 // Contenido bilingüe de Huella (ES / EN)
 const translations = {
   es: {
-    nav: { home: "Inicio", services: "Servicios", about: "Sobre Nosotros", team: "Equipo", contact: "Contacto", cta: "Pedir Cita" },
+    nav: { home: "Inicio", services: "Servicios", about: "Sobre nosotros", team: "Equipo", contact: "Contacto", cta: "Pedir Cita" },
     hero: {
-      eyebrow: "Clínica Veterinaria Huella",
+      eyebrow: "Huella",
       title: "Cuidamos a tu mejor amigo",
-      subtitle: "Atención veterinaria con corazón. Más de 15 años brindando salud, cariño y confianza a tu mascota.",
+      subtitle: "Atención veterinaria con corazón. Más de 10 años brindando salud, cariño y confianza a tu mascota.",
       cta: "Pedir Cita",
       ctaSecondary: "Nuestros Servicios",
     },
@@ -24,7 +24,7 @@ const translations = {
     about: {
       title: "Sobre Huella",
       subtitle: "Más que una clínica, una familia",
-      body: "Desde 2009, en Huella creemos que cada mascota merece el mejor cuidado. Nuestro equipo combina experiencia, tecnología y un trato cercano para que tu compañero peludo se sienta como en casa.",
+      body: "En Huella creemos que cada mascota merece el mejor cuidado. Nuestro equipo combina experiencia, tecnología y un trato cercano para que tu compañero peludo se sienta como en casa.",
       values: [
         { title: "Cuidado", desc: "Trato amoroso y respetuoso con cada paciente." },
         { title: "Confianza", desc: "Transparencia en cada diagnóstico y tratamiento." },
@@ -32,26 +32,26 @@ const translations = {
       ],
     },
     team: {
-      title: "Conoce a Nuestro Equipo",
+      title: "Conoce a nuestro equipo",
       subtitle: "Veterinarios apasionados por los animales",
       members: [
-        { name: "Dra. María González", role: "Directora · Medicina Interna" },
-        { name: "Dr. Carlos Ruiz", role: "Cirujano Veterinario" },
-        { name: "Dra. Laura Méndez", role: "Dermatología y Felinos" },
-        { name: "Dr. Andrés Soto", role: "Emergencias y Cuidados Críticos" },
+        { name: "Víctor Zomeño", role: "Director · Cirujano Veterinario" },
+        { name: "Cristina XXXXX", role: "Auxiliar veterinaria" },
+        /*{ name: "Dra. Laura Méndez", role: "Dermatología y Felinos" },
+        { name: "Dr. Andrés Soto", role: "Emergencias y Cuidados Críticos" },*/
       ],
     },
     why: {
       title: "¿Por qué elegirnos?",
       items: [
         { title: "Emergencias 24/7", desc: "Disponibles cuando nos necesites." },
-        { title: "Equipo Experimentado", desc: "Veterinarios certificados y empáticos." },
-        { title: "Equipo Moderno", desc: "Tecnología de última generación." },
-        { title: "Trato con Amor", desc: "Tu mascota como prioridad." },
+        { title: "Equipo experimentado", desc: "Veterinarios certificados y empáticos." },
+        { title: "Equipo moderno", desc: "Tecnología de última generación." },
+        { title: "Trato con amor", desc: "Tu mascota como prioridad." },
       ],
     },
     testimonials: {
-      title: "Lo que dicen nuestras familias",
+      title: "Lo que dicen nuestros clientes",
       items: [
         { quote: "Cuidaron a mi gata como si fuera suya. Profesionales y muy cariñosos.", author: "Ana Pérez" },
         { quote: "La mejor clínica de la ciudad. Salvaron a mi perro en una emergencia.", author: "Luis Martín" },
@@ -69,21 +69,30 @@ const translations = {
       sending: "Enviando...",
       sent: "¡Mensaje enviado! Te contactaremos pronto.",
       error: "Hubo un problema al enviar. Inténtalo de nuevo o llámanos.",
-      address: "Av. Las Mascotas 123, Ciudad",
-      hours: "Lun – Sáb: 9:00 – 20:00 · Dom: Emergencias",
+      address: "Av. Bautista Soler y Crespo 49, Turís, Valencia, 46389",
+      hours: "Lunes – Viernes: 10:00 – 20:00 · Sábados: 10:00 - 14:00",
       hoursLabel: "Horario",
       addressLabel: "Dirección",
       phoneLabel: "Teléfono",
       emailLabel: "Email",
     },
-    footer: { tagline: "Cuidando a tu mejor amigo desde 2009.", links: "Enlaces rápidos", follow: "Síguenos", rights: "Todos los derechos reservados." },
+    footer: { tagline: "Cuidando a tu mejor amigo desde 2026.", links: "Enlaces rápidos", follow: "Síguenos", rights: "Todos los derechos reservados." },
   },
+
+
+
+
+
+
+
+
+
   en: {
-    nav: { home: "Home", services: "Services", about: "About Us", team: "Team", contact: "Contact", cta: "Book Appointment" },
+    nav: { home: "Home", services: "Services", about: "About us", team: "Team", contact: "Contact", cta: "Book Appointment" },
     hero: {
-      eyebrow: "Huella Veterinary Clinic",
+      eyebrow: "Huella",
       title: "We care for your best friend",
-      subtitle: "Veterinary care with heart. Over 15 years providing health, love and trust for your pet.",
+      subtitle: "Veterinary care with heart. Over 10 years providing health, love and trust for your pet.",
       cta: "Book Appointment",
       ctaSecondary: "Our Services",
     },
@@ -102,7 +111,7 @@ const translations = {
     about: {
       title: "About Huella",
       subtitle: "More than a clinic, a family",
-      body: "Since 2009, at Huella we believe every pet deserves the best care. Our team blends experience, technology and a personal touch so your furry friend feels right at home.",
+      body: "At Huella we believe every pet deserves the best care. Our team blends experience, technology and a personal touch so your furry friend feels right at home.",
       values: [
         { title: "Care", desc: "Loving, respectful treatment for every patient." },
         { title: "Trust", desc: "Transparency in every diagnosis and treatment." },
@@ -113,19 +122,19 @@ const translations = {
       title: "Meet Our Team",
       subtitle: "Veterinarians passionate about animals",
       members: [
-        { name: "Dr. María González", role: "Director · Internal Medicine" },
-        { name: "Dr. Carlos Ruiz", role: "Veterinary Surgeon" },
-        { name: "Dr. Laura Méndez", role: "Dermatology & Felines" },
-        { name: "Dr. Andrés Soto", role: "Emergency & Critical Care" },
+        { name: "Víctor Zomeño", role: "Surgeon Veterinary" },
+        { name: "Cristina XXXXX", role: "Clinical assistant" },
+        /*{ name: "Dr. Laura Méndez", role: "Dermatology & Felines" },
+        { name: "Dr. Andrés Soto", role: "Emergency & Critical Care" },*/
       ],
     },
     why: {
       title: "Why choose us?",
       items: [
         { title: "24/7 Emergencies", desc: "Available whenever you need us." },
-        { title: "Experienced Team", desc: "Certified and empathetic vets." },
-        { title: "Modern Equipment", desc: "Latest generation technology." },
-        { title: "Loving Care", desc: "Your pet is our priority." },
+        { title: "Experienced team", desc: "Certified and empathetic vets." },
+        { title: "Modern equipment", desc: "Latest generation technology." },
+        { title: "Loving care", desc: "Your pet is our priority." },
       ],
     },
     testimonials: {
@@ -147,13 +156,13 @@ const translations = {
       sending: "Sending...",
       sent: "Message sent! We'll be in touch soon.",
       error: "Something went wrong. Please try again or call us.",
-      address: "123 Pet Avenue, City",
-      hours: "Mon – Sat: 9:00 – 20:00 · Sun: Emergencies",
+      address: "Av. Bautista Soler y Crespo 49, Turís, Valencia, 46389",
+      hours: "Lunes – Viernes: 10:00 – 20:00 · Sábados: 10:00 - 14:00",
       hoursLabel: "Hours",
       addressLabel: "Address",
       phoneLabel: "Phone",
       emailLabel: "Email",
     },
-    footer: { tagline: "Caring for your best friend since 2009.", links: "Quick links", follow: "Follow us", rights: "All rights reserved." },
+    footer: { tagline: "Caring for your best friend since 2026.", links: "Quick links", follow: "Follow us", rights: "All rights reserved." },
   },
 };
