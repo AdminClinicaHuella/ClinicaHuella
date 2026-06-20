@@ -3,13 +3,14 @@
    - Cambio de idioma ES/EN (lee data-es / data-en del HTML)
    - Menú móvil
    - Formulario de contacto
-   Funciona tanto en index.html como en las subpáginas de /promos.
-   Cada parte se ejecuta solo si sus elementos existen en la página.
+   No genera HTML: todo el contenido está escrito en index.html
    ========================================================= */
 
-// ---- CONFIG: endpoint de Formspree ----
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvznjdvb";
-// ----------------------------------------
+// ---- CONFIG: pega aquí tu endpoint de Formspree (Fase 2) ----
+// Mientras esté vacío, el formulario funciona en "modo demo"
+// (muestra el mensaje de éxito sin enviar nada).
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvznjdvb"; // ej: "https://formspree.io/f/xxxxxxx"
+// -------------------------------------------------------------
 
 const STORAGE_KEY = "huella-lang";
 
@@ -122,6 +123,79 @@ function setupMenu() {
   );
 }
 
+/* ---------- Galería (carrusel + lightbox) ---------- */
+function setupGallery() {
+  const gallery = document.querySelector("[data-gallery]");
+  if (!gallery) return;
+
+  const track = gallery.querySelector("[data-gallery-track]");
+  const prevBtn = gallery.querySelector("[data-gallery-prev]");
+  const nextBtn = gallery.querySelector("[data-gallery-next]");
+  const items = Array.from(track.children);
+  let index = 0;
+
+  // Cuántas fotos se ven a la vez según el ancho (coincide con el CSS)
+  function perView() {
+    if (window.innerWidth <= 560) return 1;
+    if (window.innerWidth <= 900) return 2;
+    return 3;
+  }
+
+  function maxIndex() {
+    return Math.max(0, items.length - perView());
+  }
+
+  function update() {
+    if (index > maxIndex()) index = maxIndex();
+    // Desplaza el track el ancho de una foto (incluido el gap)
+    const item = items[0];
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    const step = item.getBoundingClientRect().width + gap;
+    track.style.transform = `translateX(${-index * step}px)`;
+    // Desactiva flechas en los extremos
+    prevBtn.disabled = index <= 0;
+    nextBtn.disabled = index >= maxIndex();
+  }
+
+  prevBtn.addEventListener("click", () => { index = Math.max(0, index - 1); update(); });
+  nextBtn.addEventListener("click", () => { index = Math.min(maxIndex(), index + 1); update(); });
+  window.addEventListener("resize", update);
+
+  update();
+
+  // Lightbox: abrir al hacer clic en una foto
+  const lightbox = document.querySelector("[data-lightbox]");
+  const lightboxImg = document.querySelector("[data-lightbox-img]");
+  const lightboxClose = document.querySelector("[data-lightbox-close]");
+
+  if (lightbox && lightboxImg) {
+    items.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const img = btn.querySelector("img");
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.hidden = false;
+        document.body.style.overflow = "hidden"; // bloquea scroll de fondo
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      lightboxImg.src = "";
+      document.body.style.overflow = "";
+    }
+    lightboxClose.addEventListener("click", closeLightbox);
+    // Cerrar al hacer clic fuera de la imagen
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    // Cerrar con Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+    });
+  }
+}
+
 /* ---------- Init ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   // Año del footer (solo si existe)
@@ -143,4 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Menú y formulario solo si están presentes en la página
   if (document.getElementById("menu-toggle")) setupMenu();
   if (document.getElementById("contact-form")) setupForm();
+
+  // Galería (solo si está presente)
+  setupGallery();
 });

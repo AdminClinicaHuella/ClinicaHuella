@@ -277,11 +277,11 @@
 
       <div class="campaign-grid">
 
-        <!-- ===== Campaña: Limpieza bucal ===== -->
-        <a href="promos/limpieza-bucal.html" class="campaign-card">
-          <img class="campaign-img" src="assets/LimpiezaDental.png" alt="Limpieza bucal" loading="lazy" />
+        <!-- ===== Campaña: Limpieza dental ===== -->
+        <a href="promos/limpieza-dental.html" class="campaign-card">
+          <img class="campaign-img" src="assets/LimpiezaDental.png" alt="Limpieza dental" loading="lazy" />
           <div class="campaign-body">
-            <h3 data-es="Limpieza bucal" data-en="Dental cleaning">Limpieza bucal</h3>
+            <h3 data-es="Limpieza dental" data-en="Dental cleaning">Limpieza dental</h3>
             <p data-es="Cuida la salud dental de tu mascota con nuestra campaña de limpieza de boca."
                data-en="Take care of your pet's dental health with our oral cleaning campaign.">Cuida la salud dental de tu mascota con nuestra campaña de limpieza de boca.</p>
           </div>
@@ -293,7 +293,7 @@
 
         <!-- ===== Campaña: Esterilización ===== -->
         <a href="promos/esterilizacion.html" class="campaign-card">
-          <img class="campaign-img" src="assets/Castracion.jpg" alt="Castracion" loading="lazy" />
+          <img class="campaign-img" src="assets/Esterilizacion.jpg" alt="Esterilizacion" loading="lazy" />
           <div class="campaign-body">
             <h3 data-es="Esterilización" data-en="Sterilization">Esterilización</h3>
             <p data-es="Campaña de esterilización canina y felina con condiciones especiales."
@@ -402,6 +402,49 @@
         </div>
       </div>
     </div>
+
+      <!-- ===================== GALERÍA =====================
+           CÓMO AÑADIR / QUITAR FOTOS:
+           Cada foto es un <button class="gallery-item"> con una <img> dentro.
+           - Para AÑADIR: copia un bloque <button class="gallery-item">...</button>
+             y cambia el src y el alt.
+           - Para QUITAR: borra ese bloque.
+           El carrusel se ajusta solo al número de fotos.
+           Muestra 3 a la vez (2 en tablet, 1 en móvil) y avanza de 1 en 1.
+           Al hacer clic en una foto, se abre ampliada (lightbox).
+      -->
+      <div class="gallery" data-gallery>
+        <button class="gallery-arrow gallery-prev" aria-label="Anterior" data-gallery-prev>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+
+        <div class="gallery-viewport" data-gallery-viewport>
+          <div class="gallery-track" data-gallery-track>
+
+            <button class="gallery-item">
+              <img src="assets/RenderRecepcion.jpg" alt="Instalaciones HUELLA" loading="lazy" />
+            </button>
+
+            <button class="gallery-item">
+              <img src="assets/RenderHall.jpg" alt="Sala de espera" loading="lazy" />
+            </button>
+
+            <button class="gallery-item">
+              <img src="assets/RenderSalaEspera.jpg" alt="Consulta" loading="lazy" />
+            </button>
+
+            <button class="gallery-item">
+              <img src="assets/RenderConsulta.jpg" alt="Quirófano" loading="lazy" />
+            </button>
+
+
+          </div>
+        </div>
+
+        <button class="gallery-arrow gallery-next" aria-label="Siguiente" data-gallery-next>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
   </section>
 
 
@@ -767,6 +810,14 @@
        </span> HUELLA<span data-es="" data-en="">Todos los derechos reservados.</span>
     </div>
   </footer>
+
+  <!-- Lightbox (visor de imagen ampliada). No tocar. -->
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lightbox-close" aria-label="Cerrar" data-lightbox-close>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img class="lightbox-img" src="" alt="" data-lightbox-img />
+  </div>
 
   <script src="app.js"></script>
 </body>
