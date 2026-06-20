@@ -3,14 +3,13 @@
    - Cambio de idioma ES/EN (lee data-es / data-en del HTML)
    - Menú móvil
    - Formulario de contacto
-   No genera HTML: todo el contenido está escrito en index.html
+   Funciona tanto en index.html como en las subpáginas de /promos.
+   Cada parte se ejecuta solo si sus elementos existen en la página.
    ========================================================= */
 
-// ---- CONFIG: pega aquí tu endpoint de Formspree (Fase 2) ----
-// Mientras esté vacío, el formulario funciona en "modo demo"
-// (muestra el mensaje de éxito sin enviar nada).
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvznjdvb"; // ej: "https://formspree.io/f/xxxxxxx"
-// -------------------------------------------------------------
+// ---- CONFIG: endpoint de Formspree ----
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvznjdvb";
+// ----------------------------------------
 
 const STORAGE_KEY = "huella-lang";
 
@@ -43,9 +42,11 @@ function applyLang(lang) {
     if (val !== null) el.textContent = val;
   });
 
-  // Estado visual del botón de idioma
-  document.getElementById("lang-es").classList.toggle("active", lang === "es");
-  document.getElementById("lang-en").classList.toggle("active", lang === "en");
+  // Estado visual del botón de idioma (solo si existe)
+  const esBtn = document.getElementById("lang-es");
+  const enBtn = document.getElementById("lang-en");
+  if (esBtn) esBtn.classList.toggle("active", lang === "es");
+  if (enBtn) enBtn.classList.toggle("active", lang === "en");
 
   // Atributo lang del documento
   document.documentElement.lang = lang;
@@ -123,15 +124,23 @@ function setupMenu() {
 
 /* ---------- Init ---------- */
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("year").textContent = new Date().getFullYear();
+  // Año del footer (solo si existe)
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Idioma: leer guardado y aplicarlo (heredado de la página principal)
   const stored = localStorage.getItem(STORAGE_KEY);
   applyLang(stored === "en" || stored === "es" ? stored : "es");
 
-  document.getElementById("lang-toggle").addEventListener("click", () => {
-    applyLang(currentLang === "es" ? "en" : "es");
-  });
+  // Botón de idioma (solo si existe)
+  const langToggle = document.getElementById("lang-toggle");
+  if (langToggle) {
+    langToggle.addEventListener("click", () => {
+      applyLang(currentLang === "es" ? "en" : "es");
+    });
+  }
 
-  setupMenu();
-  setupForm();
+  // Menú y formulario solo si están presentes en la página
+  if (document.getElementById("menu-toggle")) setupMenu();
+  if (document.getElementById("contact-form")) setupForm();
 });

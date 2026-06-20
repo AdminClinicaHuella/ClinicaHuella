@@ -38,9 +38,9 @@
     <div class="container header-inner">
       <a href="#sobre" class="logo">
         <span class="logo-mark" aria-hidden="true">
-          <img class="nav-logo" src="assets/LogoLight.jpg">
+          <img class="nav-logo" src="assets/LogotipoHuella_Horizontal_Negro@2x.png">
         </span>
-        <span class="logo-text" data-es="Clínica veterinaria HUELLA" data-en="HUELLA veterinary clinic"  >Clínica veterinaria HUELLA</span>
+        <!--<span class="logo-text" data-es="Clínica veterinaria HUELLA" data-en="HUELLA veterinary clinic"  >Clínica veterinaria HUELLA</span>-->
       </a>
 
       <nav class="nav-desktop" aria-label="Principal">
@@ -48,7 +48,7 @@
         <a href="#servicios"  data-es="Servicios"      data-en="Services">Servicios</a>
         <a href="#sobre"      data-es="Sobre nosotros" data-en="About us">Sobre nosotros</a>
         <a href="#equipo"     data-es="Equipo"         data-en="Team">Equipo</a>
-        <a href="#contacto"   data-es="Contacto"       data-en="Contact">Contacto</a>
+        <!--<a href="#contacto"   data-es="Contacto"       ct">Contacto</a>-->
         <a href="#llegar"     data-es="Cómo llegar"    data-en="Get directions">Cómo llegar</a>
       </nav>
 
@@ -56,7 +56,7 @@
         <button id="lang-toggle" class="lang-btn" aria-label="Cambiar idioma / Toggle language">
           <span id="lang-es">ES</span><span class="lang-sep">/</span><span id="lang-en">EN</span>
         </button>
-        <a href="#contacto" class="btn btn-primary btn-cta" data-es="Pedir cita" data-en="Book appointment">Pedir Cita</a>
+        <a href="#contacto" class="btn btn-primary btn-cta" data-es="Contacta con nosotros" data-en="Contact us">Pedir Cita</a>
         <button id="menu-toggle" class="menu-btn" aria-label="Menú" aria-expanded="false">
           <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
           <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -69,9 +69,9 @@
       <a href="#servicios" data-es="Servicios"      data-en="Services">Servicios</a>
       <a href="#sobre"     data-es="Sobre nosotros" data-en="About us">Sobre nosotros</a>
       <a href="#equipo"    data-es="Equipo"         data-en="Team">Equipo</a>
-      <a href="#contacto"  data-es="Contacto"       data-en="Contact">Contacto</a>
+      <!--<a href="#contacto"  data-es="Contacto"       data-en="Contact">Contacto</a>-->
       <a href="#llegar"    data-es="Cómo llegar"    data-en="Get directions">Cómo llegar</a>
-      <a href="#contacto" class="btn btn-primary nav-mobile-cta" data-es="Pedir cita" data-en="Book appointment">Pedir cita</a>
+      <a href="#contacto" class="btn btn-primary nav-mobile-cta" data-es="Contacta con nosotros" data-en="Contact us">Pedir cita</a>
 
     </nav>
   </header>
@@ -105,13 +105,15 @@
            data-es="Más de 10 años de experiencia brindando medicina veterinaria cercana, profesional y de confianza."
            data-en="More than 10 years of experience providing friendly, professional and trustworthy veterinary care.">Más de 10 años de experiencia brindando medicina veterinaria cercana, profesional y de confianza.</p>
         <div class="hero-buttons">
-          <a href="#contacto" class="btn btn-primary"  data-es="Pedir cita"        data-en="Book appointment">Pedir Cita</a>
+          
           <a href="#servicios" class="btn btn-outline" data-es="Nuestros servicios" data-en="Our services">Nuestros Servicios</a>
+          <a href="#contacto" class="btn btn-primary"  data-es="Pedir cita"        data-en="Book appointment">Pedir Cita</a>
+
         </div>
       </div>
       <div class="hero-image-wrap">
         <div class="hero-image-glow" aria-hidden="true"></div>
-        <img src="assets/hero-vet.jpg" alt="Veterinaria con cachorro" width="1536" height="1152" class="hero-image" />
+        <img src="assets/DogCat.png" alt="Veterinaria con cachorro" width="1536" height="1152" class="hero-image" />
       </div>
     </div>
   </section>
@@ -125,8 +127,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- ===================== SERVICIOS ===================== -->
-  <section id="servicios" class="section">
+  <section id="servicios" class="servicios section-primary">
+      <div class="wave-top" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill="var(--primary)"
+            d="M0,40 C360,90 720,90 1080,50 C1260,30 1350,35 1440,45 L1440,100 L0,100 Z"></path>
+        </svg>
+      </div>
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow"
@@ -217,8 +247,121 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+  <!-- ===================== CAMPAÑAS Y PROMOCIONES =====================
+       CÓMO AÑADIR / QUITAR UNA CAMPAÑA:
+       Cada campaña es un bloque <a class="campaign-card"> ... </a>.
+       - Para AÑADIR: copia un bloque entero y cambia el href, el icono,
+         el título (data-es/data-en) y la descripción.
+       - Para QUITAR: borra el bloque <a class="campaign-card">...</a> completo,
+         o coméntalo con  si solo quieres ocultarlo temporalmente.
+       La rejilla se reordena sola: con 1, 2 o 3+ tarjetas siempre queda centrada.
+  -->
+  <section id="promociones" class="promociones section-primary">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow"
+           data-es="Cuidamos su salud con precios especiales"
+           data-en="We care for their health with special prices">Cuidamos su salud con precios especiales</p>
+        <h2 data-es="Campañas y promociones" data-en="Campaigns and promotions">Campañas y promociones</h2>
+      </div>
+
+      <div class="campaign-grid">
+
+        <!-- ===== Campaña: Limpieza bucal ===== -->
+        <a href="promos/limpieza-bucal.html" class="campaign-card">
+          <img class="campaign-img" src="assets/LimpiezaDental.png" alt="Limpieza bucal" loading="lazy" />
+          <div class="campaign-body">
+            <h3 data-es="Limpieza bucal" data-en="Dental cleaning">Limpieza bucal</h3>
+            <p data-es="Cuida la salud dental de tu mascota con nuestra campaña de limpieza de boca."
+               data-en="Take care of your pet's dental health with our oral cleaning campaign.">Cuida la salud dental de tu mascota con nuestra campaña de limpieza de boca.</p>
+          </div>
+          <span class="campaign-cta" data-es="Más info" data-en="More info">Más info
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+
+        <!-- ===== Campaña: Esterilización ===== -->
+        <a href="promos/esterilizacion.html" class="campaign-card">
+          <img class="campaign-img" src="assets/Castracion.jpg" alt="Castracion" loading="lazy" />
+          <div class="campaign-body">
+            <h3 data-es="Esterilización" data-en="Sterilization">Esterilización</h3>
+            <p data-es="Campaña de esterilización canina y felina con condiciones especiales."
+               data-en="Canine and feline sterilization campaign with special conditions.">Campaña de esterilización canina y felina con condiciones especiales.</p>
+          </div>
+          <span class="campaign-cta" data-es="Más info" data-en="More info">Más info
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+
+        <!-- ===== Campaña: Vacunación ===== -->
+        <a href="promos/vacunacion.html" class="campaign-card">
+          <img class="campaign-img" src="assets/vacunacion.png" alt="Vacunación" loading="lazy" />
+          <div class="campaign-body">
+            <h3 data-es="Vacunación" data-en="Vaccinations">Vacunación</h3>
+            <p data-es="Plan completo de vacunas para perros, gatos y exóticos con precios de campaña."
+               data-en="Full vaccination plans for dogs, cats and exotics at campaign prices.">Plan completo de vacunas para perros, gatos y exóticos con precios de campaña.</p>
+          </div>
+          <span class="campaign-cta" data-es="Más info" data-en="More info">Más info
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- ===================== SOBRE ===================== -->
-  <section id="sobre" class="section section-tint">
+  <section id="sobre" class="sobre section-tint">
+
+    <div class="wave-top" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="var(--primary)"
+          d="M0,40 C360,90 720,90 1080,50 C1260,30 1350,35 1440,45 L1440,100 L0,100 Z"></path>
+      </svg>
+    </div>
+
+
     <div class="container about-grid">
       <div class="about-image-wrap">
         <img src="assets/RenderRecepcion.jpg" alt="Clínica HUELLA" width="1280" height="1024" loading="lazy" class="about-image" />
@@ -269,8 +412,15 @@
 
 
 
+
+
+
+
+
+
+
   <!-- ===================== EQUIPO ===================== -->
-  <section id="equipo" class="section">
+  <section id="equipo" class="equipo">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow"
@@ -282,7 +432,9 @@
       <div class="team-grid">
 
         <div class="team-card">
-          <div class="team-photo"><div class="team-avatar">V</div></div>
+          <div class="team-photo">
+            <img src="assets/Victor.jpg">
+          </div>
           <div class="team-info">
             <h3>Víctor Zomeño</h3>
             <p data-es="Cirujano veterinario" data-en=" Surgeon veterinary">Cirujano Veterinario</p>
@@ -290,7 +442,9 @@
         </div>
 
         <div class="team-card">
-          <div class="team-photo"><div class="team-avatar">C</div></div>
+          <div class="team-photo">
+            <img src="assets/Cristina.jpg">
+          </div>
           <div class="team-info">
             <h3>Cristina Xxxxx</h3>
             <p data-es="Auxiliar clínica" data-en="Clinical assistant">Auxiliar veterinaria</p>
@@ -308,8 +462,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
   <!-- ===================== POR QUÉ ELEGIRNOS ===================== -->
-  <section class="section section-primary">
+  <section class="porqueElegirnos section-primary">
+      <div class="wave-top" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill="var(--primary)"
+            d="M0,40 C360,90 720,90 1080,50 C1260,30 1350,35 1440,45 L1440,100 L0,100 Z"></path>
+        </svg>
+      </div>
     <div class="container">
       <h2 class="why-title" data-es="¿Por qué elegirnos?" data-en="Why choose us?">¿Por qué elegirnos?</h2>
 
@@ -349,6 +518,12 @@
 
       </div>
     </div>
+      <div class="wave-bottom" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill="var(--primary)"
+            d="M0,40 C360,90 720,90 1080,50 C1260,30 1350,35 1440,45 L1440,100 L0,100 Z"></path>
+        </svg>
+      </div>
   </section>
 
 
@@ -357,8 +532,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
   <!-- ===================== TESTIMONIOS ===================== -->
-  <section class="section">
+  <section class="testimonios">
     <div class="container">
       <div class="section-header">
         <h2 data-es="Lo que dicen nuestros clientes" data-en="What our clients say">Lo que dicen nuestros clientes</h2>
@@ -367,13 +551,6 @@
       <div class="testimonials-grid">
 
         <div class="testimonial">
-          <div class="stars">
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-          </div>
           <p class="quote"
              data-es="“Cuidaron a mi gata como si fuera suya. Profesionales y muy cariñosos.”"
              data-en="“They cared for my cat like their own. Professional and so warm.”">“Cuidaron a mi gata como si fuera suya. Profesionales y muy cariñosos.”</p>
@@ -381,13 +558,6 @@
         </div>
 
         <div class="testimonial">
-          <div class="stars">
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-          </div>
           <p class="quote"
              data-es="“La mejor clínica de la ciudad. Salvaron a mi perro en una emergencia.”"
              data-en="“Best clinic in town. They saved my dog in an emergency.”">“La mejor clínica de la ciudad. Salvaron a mi perro en una emergencia.”</p>
@@ -395,13 +565,6 @@
         </div>
 
         <div class="testimonial">
-          <div class="stars">
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-          </div>
           <p class="quote"
              data-es="“Atención excepcional, ambiente cálido y precios justos. Súper recomendada.”"
              data-en="“Exceptional care, warm atmosphere and fair prices. Highly recommended.”">“Atención excepcional, ambiente cálido y precios justos. Súper recomendada.”</p>
@@ -421,8 +584,16 @@
 
 
 
+
+
+
+
+
+
+
+
   <!-- ===================== CONTACTO ===================== -->
-  <section id="contacto" class="section section-tint">
+  <section id="contacto" class="contacto section-tint">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow" data-es="Estamos aquí para ayudarte" data-en="We're here to help">Estamos aquí para ayudarte</p>
@@ -529,6 +700,13 @@
 
 
 
+
+
+
+
+
+
+
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container footer-grid">
@@ -556,7 +734,7 @@
       </div>
 
 
-      <div>
+      <div class="footer-quicklinks">
         <p class="footer-heading" data-es="Enlaces rápidos" data-en="Quick links">Enlaces rápidos</p>
         <ul class="footer-links">
           <li><a href="#inicio"    data-es="Inicio"         data-en="Home">Inicio</a></li>
@@ -572,7 +750,7 @@
 
       <div>
         <a href="https://adminclinicahuella.github.io/ClinicaHuella/">
-          <div class="logo logo-footer">
+          <div class="footer-logo-container">
             
             <img class="footer-logo" src="assets/LogotipoHuella_Vertical_Verde@2x.png">
           </div>
