@@ -204,6 +204,20 @@ h1, h2, h3, .logo-text, .why-title {
 .nav-mobile-cta { text-align: center; margin-top: 0.5rem; color: var(--primary-foreground); }
 @media (min-width: 1150px) { .nav-mobile.open { display: none; } }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===== Hero ===== */
 .hero {
   overflow: hidden;
@@ -212,20 +226,11 @@ h1, h2, h3, .logo-text, .why-title {
       color-mix(in oklab, var(--cream) 75%, transparent),
       color-mix(in oklab, var(--background) 70%, transparent)),
     url('assets/headBackground.jpg');
-  background-size: 100%;
-  background-position: right 35% bottom 45%;;
+  background-size: 120%;
+  background-position: right 80% bottom 55%;
   background-repeat: no-repeat;
 }
 
-
-
-.inicio-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 90%; 
-  margin-right: auto;  
-  margin-left: 0;
-}
 
 
 .hero-copy { 
@@ -254,8 +259,6 @@ h1, h2, h3, .logo-text, .why-title {
 
 .lead {  
   color: var(--muted-foreground); 
-  margin-left: 2rem;
-  margin-right: 1rem;
 }
 
 .hero-buttons {
@@ -267,33 +270,25 @@ h1, h2, h3, .logo-text, .why-title {
   margin-bottom: 3rem;
 }
 
-.hero-image-wrap { 
-  position: relative; 
-}
 
-.hero-image-glow { 
-  position: absolute; 
-  inset: -1rem; 
-  border-radius: 2.5rem;
-  background: color-mix(in oklab, var(--primary) 10%, transparent); 
-  filter: blur(32px); 
-}
+
+
 
 
 
 @media (max-width: 700px) { 
   .hero {
     background-size: 200%;
-    background-repeat: no-repeat;
+    background-position: right 45% bottom 50%;
   }
+
+  .hero-logo {
+    max-width: 70%; 
+  }
+
 
   .lead {  
     font-size: 0.8rem;
-    margin-left: 1rem;
-  }
-
-  .inicio-container {
-    max-width: 100%; 
   }
 
 }
