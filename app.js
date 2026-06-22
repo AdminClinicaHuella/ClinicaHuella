@@ -61,6 +61,25 @@ function setupForm() {
   const status = document.getElementById("contact-status");
   const submitBtn = document.getElementById("contact-submit");
 
+  // --- Feedback visual: activar el botón solo si el formulario está completo ---
+  function checkFormValid() {
+    const consent = document.getElementById("f-consent");
+    const ok =
+      form.name.value.trim() &&
+      form.email.value.trim() &&
+      form.message.value.trim() &&
+      (!consent || consent.checked);
+    submitBtn.disabled = !ok;
+  }
+
+  // Revisa cada vez que el usuario escribe o marca la casilla
+  form.addEventListener("input", checkFormValid);
+  form.addEventListener("change", checkFormValid);
+
+  // Estado inicial: desactivado al cargar
+  checkFormValid();
+
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const m = formMessages[currentLang];
@@ -72,6 +91,16 @@ function setupForm() {
     };
 
     if (!data.name || !data.email || !data.message) return;
+
+    const consent = document.getElementById("f-consent");
+    if (consent && !consent.checked) {
+      status.textContent = currentLang === "es"
+        ? "Debes aceptar la política de privacidad."
+        : "You must accept the privacy policy.";
+      status.className = "form-status error";
+      status.hidden = false;
+      return;
+    }
 
     status.hidden = true;
     submitBtn.disabled = true;
