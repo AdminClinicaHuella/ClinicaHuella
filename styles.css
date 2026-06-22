@@ -205,35 +205,32 @@ h1, h2, h3, .logo-text, .why-title {
 @media (min-width: 1150px) { .nav-mobile.open { display: none; } }
 
 /* ===== Hero ===== */
-.hero { 
-  position: relative; 
+.hero {
   overflow: hidden;
-  background: linear-gradient(to bottom right, var(--cream), var(--background), var(--secondary)); 
-  padding-top: 2rem;
-}
-
-.hero-grid { 
-  position: relative; 
-  z-index: 1; 
-  display: grid; 
-  gap: 1rem; 
-}
-
-@media (min-width: 1150px) { 
-  .hero-grid { 
-    grid-template-columns: 2fr 1fr; 
-    gap: 1rem;  
-    padding-bottom: 6rem; 
-  } 
+  background-image:
+    linear-gradient(to bottom right,
+      color-mix(in oklab, var(--cream) 75%, transparent),
+      color-mix(in oklab, var(--background) 70%, transparent)),
+    url('assets/headBackground.jpg');
+  background-size: 100%;
+  background-position: right 35% bottom 45%;;
+  background-repeat: no-repeat;
 }
 
 
+
+.inicio-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%; 
+  margin-right: auto;  
+  margin-left: 0;
+}
 
 
 .hero-copy { 
   display: flex; 
   flex-direction: column; 
-  width: 100%;
 }
 
 
@@ -245,41 +242,29 @@ h1, h2, h3, .logo-text, .why-title {
   color: #788538;
 }
 
-/*
-.titulo { 
-  font-family: var(--font-display);
-  font-size: clamp(8rem, 10vw, 15rem); 
-  font-weight: bold; 
-  color: #788538;
-  margin: 0;
-}
 
-.subtitulo {
-  font-family: var(--font-sans);
-  font-size: clamp(2rem, 1vw, 3rem); 
-  color: #788538;
-  margin-bottom: 1rem;
-}*/
 
 
 .hero-logo {
-  width: 90%;
   height: auto;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
+  max-width: 60%; 
 }
 
 .lead {  
   color: var(--muted-foreground); 
+  margin-left: 2rem;
+  margin-right: 1rem;
 }
 
-.hero-buttons { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 0.75rem; 
-  padding-top: 0.5rem; 
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .hero-image-wrap { 
@@ -294,22 +279,28 @@ h1, h2, h3, .logo-text, .why-title {
   filter: blur(32px); 
 }
 
-.hero-image { 
-  position: relative; 
-  border-radius: 2rem 0 2rem 0;
-  /*box-shadow: var(--shadow-soft);*/
-  width: 80%; 
-  height: auto; 
-  margin: 0 auto;
-  object-fit: cover;  
-  margin-bottom: 4rem;
+
+
+@media (max-width: 700px) { 
+  .hero {
+    background-size: 200%;
+    background-repeat: no-repeat;
+  }
+
+  .lead {  
+    font-size: 0.8rem;
+    margin-left: 1rem;
+  }
+
+  .inicio-container {
+    max-width: 100%; 
+  }
+
 }
 
-@media (min-width: 1150px) {
-  .hero-image {
-    width: 100%;
-  }
-}
+
+
+
 
 
 
