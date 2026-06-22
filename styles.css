@@ -279,7 +279,7 @@ h1, h2, h3, .logo-text, .why-title {
 @media (max-width: 700px) { 
   .hero {
     background-size: 200%;
-    background-position: right 45% bottom 50%;
+    background-position: right 45% bottom 40%;
   }
 
   .hero-logo {
