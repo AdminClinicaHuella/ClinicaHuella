@@ -69,13 +69,13 @@
     </div>
 
     <nav id="nav-mobile" class="nav-mobile container" aria-label="Móvil">
-      <a href="#inicio"    data-es="Inicio"         data-en="Home">Inicio</a>
-      <a href="#servicios" data-es="Servicios"      data-en="Services">Servicios</a>
-      <a href="#promociones"  data-es="Campañas y promociones"      data-en="Campaigns and promotions">Campañas y promociones</a>
-      <a href="#sobre"     data-es="Sobre nosotros" data-en="About us">Sobre nosotros</a>
-      <!--<a href="#equipo"    data-es="Equipo"         data-en="Team">Equipo</a>-->
-      <!--<a href="#contacto"  data-es="Contacto"       data-en="Contact">Contacto</a>-->
-      <a href="#llegar"    data-es="Cómo llegar"    data-en="Get directions">Cómo llegar</a>
+      <a href="#inicio"  class="nav-button"  data-es="Inicio"         data-en="Home">Inicio</a>
+      <a href="#servicios" class="nav-button" data-es="Servicios"      data-en="Services">Servicios</a>
+      <a href="#promociones" class="nav-button" data-es="Campañas y promociones"      data-en="Campaigns and promotions">Campañas y promociones</a>
+      <a href="#sobre" class="nav-button"    data-es="Sobre nosotros" data-en="About us">Sobre nosotros</a>
+      <!--<a href="#equipo"  class="nav-button"  data-es="Equipo"         data-en="Team">Equipo</a>-->
+      <!--<a href="#contacto" class="nav-button" data-es="Contacto"       data-en="Contact">Contacto</a>-->
+      <a href="#llegar" class="nav-button"   data-es="Cómo llegar"    data-en="Get directions">Cómo llegar</a>
       <a href="#contacto" class="btn btn-primary nav-mobile-cta" data-es="Contacta con nosotros" data-en="Contact us">Pedir cita</a>
 
     </nav>
@@ -255,15 +255,7 @@
 
 
 
-  <!-- ===================== CAMPAÑAS Y PROMOCIONES =====================
-       CÓMO AÑADIR / QUITAR UNA CAMPAÑA:
-       Cada campaña es un bloque <a class="campaign-card"> ... </a>.
-       - Para AÑADIR: copia un bloque entero y cambia el href, el icono,
-         el título (data-es/data-en) y la descripción.
-       - Para QUITAR: borra el bloque <a class="campaign-card">...</a> completo,
-         o coméntalo con  si solo quieres ocultarlo temporalmente.
-       La rejilla se reordena sola: con 1, 2 o 3+ tarjetas siempre queda centrada.
-  -->
+  <!-- ===================== CAMPAÑAS Y PROMOCIONES ===================== -->
   <section id="promociones" class="promociones section-primary">
     <div class="container">
       <div class="section-header">
@@ -313,6 +305,14 @@
 
       </div>
     </div>
+
+    <div class="wave-bottom" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="var(--primary)"
+          d="M0,40 C360,90 720,90 1080,50 C1260,30 1350,35 1440,45 L1440,100 L0,100 Z"></path>
+      </svg>
+    </div>
+
   </section>
 
 
@@ -345,15 +345,6 @@
 
   <!-- ===================== SOBRE ===================== -->
   <section id="sobre" class="sobre section-tint">
-
-    <div class="wave-top" aria-hidden="true">
-      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill="var(--primary)"
-          d="M0,40 C360,90 720,90 1080,50 C1260,30 1350,35 1440,45 L1440,100 L0,100 Z"></path>
-      </svg>
-    </div>
-
-
     <div class="container about-grid">
       <div class="about-copy">
         <p class="section-eyebrow"
@@ -462,7 +453,7 @@
 
 
   <!-- ===================== EQUIPO ===================== -->
-  <section id="equipo" class="equipo">
+  <section id="equipo" class="equipo section-tint">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow"
@@ -560,12 +551,12 @@
 
       </div>
     </div>
-      <div class="wave-bottom" aria-hidden="true">
-        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill="var(--primary)"
-            d="M0,40 C360,90 720,90 1080,50 C1260,30 1350,35 1440,45 L1440,100 L0,100 Z"></path>
-        </svg>
-      </div>
+    <div class="wave-bottom" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="var(--primary)"
+          d="M0,40 C360,90 720,90 1080,50 C1260,30 1350,35 1440,45 L1440,100 L0,100 Z"></path>
+      </svg>
+    </div>
   </section>
 
 
@@ -768,23 +759,12 @@
 
       <div>
         <p class="footer-heading" data-es="Síguenos en Instagram" data-en="Follow us on Instagram">Síguenos</p>
-        <div class="social">
-          <!--<a href="#" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396z"/>
-            </svg>
-          </a>-->
+        <div class="social btn">
+
           <a href="https://www.instagram.com/huella_cv/?hl=es" Target="_blank" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
-            </svg>
+            <img src="assets/Instagram_Glyph_Gradient.png">
           </a>
-          <!--<a href="#" aria-label="Twitter">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M22 5.92a8.2 8.2 0 0 1-2.36.65 4.1 4.1 0 0 0 1.8-2.27 8.2 8.2 0 0 1-2.6 1 4.1 4.1 0 0 0-7 3.74 11.64 11.64 0 0 1-8.45-4.29 4.1 4.1 0 0 0 1.27 5.47A4.07 4.07 0 0 1 2.8 9.7v.05a4.1 4.1 0 0 0 3.29 4.02 4.1 4.1 0 0 1-1.85.07 4.1 4.1 0 0 0 3.83 2.85A8.23 8.23 0 0 1 2 18.4a11.62 11.62 0 0 0 6.29 1.84c7.55 0 11.67-6.25 11.67-11.67l-.01-.53A8.3 8.3 0 0 0 22 5.92"/>
-            </svg>
-          </a>-->
+
         </div>
       </div>
 
