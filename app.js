@@ -225,6 +225,42 @@ function setupGallery() {
   }
 }
 
+
+
+/* ---------- Modal de equipo (biografía extensa) ---------- */
+function setupTeamModal() {
+  const modal = document.querySelector("[data-team-modal]");
+  if (!modal) return;
+
+  const closeBtn = modal.querySelector("[data-team-modal-close]");
+  const panels = modal.querySelectorAll("[data-team-panel]");
+  const triggers = document.querySelectorAll("[data-team-target]");
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const target = trigger.getAttribute("data-team-target");
+      panels.forEach((p) => {
+        p.hidden = p.getAttribute("data-team-panel") !== target;
+      });
+      modal.hidden = false;
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = "";
+  }
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.hidden) closeModal();
+  });
+}
+
+
 /* ---------- Init ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   // Año del footer (solo si existe)
@@ -247,6 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("menu-toggle")) setupMenu();
   if (document.getElementById("contact-form")) setupForm();
 
-  // Galería (solo si está presente)
+
   setupGallery();
+  setupTeamModal();
 });

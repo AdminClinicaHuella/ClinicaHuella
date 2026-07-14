@@ -49,7 +49,7 @@
       <nav class="nav-desktop" aria-label="Principal">
         <a href="#inicio"     data-es="Inicio"         data-en="Home">Inicio</a>
         <a href="#servicios"  data-es="Servicios"      data-en="Services">Servicios</a>
-        <a href="#promociones"  data-es="Campañas y promociones"      data-en="Campaigns and promotions">Campañas y promociones</a>
+        <a href="#planes"  data-es="Planes de salud"      data-en="Health plans">Planes de salud</a>
         <a href="#sobre"      data-es="Sobre nosotros" data-en="About us">Sobre nosotros</a>
         <!--<a href="#equipo"     data-es="Equipo"         data-en="Team">Equipo</a>-->
         <!--<a href="#contacto"   data-es="Contacto"       ct">Contacto</a>-->
@@ -71,7 +71,7 @@
     <nav id="nav-mobile" class="nav-mobile container" aria-label="Móvil">
       <a href="#inicio"  class="nav-button"  data-es="Inicio"         data-en="Home">Inicio</a>
       <a href="#servicios" class="nav-button" data-es="Servicios"      data-en="Services">Servicios</a>
-      <a href="#promociones" class="nav-button" data-es="Campañas y promociones"      data-en="Campaigns and promotions">Campañas y promociones</a>
+      <a href="#planes" class="nav-button" data-es="Planes de salud"      data-en="Health plans">Planes de salud</a>
       <a href="#sobre" class="nav-button"    data-es="Sobre nosotros" data-en="About us">Sobre nosotros</a>
       <!--<a href="#equipo"  class="nav-button"  data-es="Equipo"         data-en="Team">Equipo</a>-->
       <!--<a href="#contacto" class="nav-button" data-es="Contacto"       data-en="Contact">Contacto</a>-->
@@ -167,10 +167,10 @@
 
         <div class="card">
           <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 6 6 5 5 0 0 0 5-5v-1.7"/><circle cx="20" cy="10" r="2"/></svg>
+            <img class="card-icon-img" src="assets/servicio_medicinaGeneral.png" alt="Imagen esquema de equipo médico">
           </div>
           <div>
-            <h3 data-es="Consulta general" data-en="General consultation">Consulta General</h3>
+            <h3 data-es="Medicina general y preventiva" data-en="General and preventive medicine">Consulta General</h3>
             <p data-es="Revisiones completas para mantener a tu mascota saludable."
               data-en="Complete checkups to keep your pet healthy.">Revisiones completas para mantener a tu mascota saludable.</p>
           </div>
@@ -179,56 +179,58 @@
 
         <div class="card">
           <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/></svg>
+            <img class="card-icon-img" src="assets/servicio_vacunacion.png" alt="Imagen aparato veterinario">
           </div>
           <div>
-            <h3 data-es="Vacunación" data-en="Vaccinations">Vacunación</h3>
-            <p data-es="Plan completo de vacunas para perros, gatos y exóticos."
-              data-en="Full vaccination plans for dogs, cats and exotics.">Plan completo de vacunas para perros, gatos y exóticos.</p>
+            <h3 data-es="Medicina preventiva" data-en="Vaccination and deworming">Medicina preventiva</h3>
+            <p data-es="Plan vacunal completo y desparasitación."
+              data-en="Full vaccination plan and deworming.">Plan vacunal completo y desparasitación.</p>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <div class="card-icon">
+            <img class="card-icon-img" src="assets/servicio_equipamiento.png" alt="Imagen de un aparato veterinario">
+          </div>
+          <div>
+            <h3 data-es="Diagnóstico por imagen" data-en="Dental Care">Diagnóstico por imagen</h3>
+            <p data-es="Radiografías, ecografías y microscopía."
+             data-en="X-rays, ultrasounds and microscopy.">Radiografías, ecografías y microscopía.</p>
           </div>
         </div>
 
         <div class="card">
           <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <img class="card-icon-img" src="assets/servicio_especialistas.png" alt="Imagen de un veterinario cirujano">
+          </div>
+          <div>
+            <h3 data-es="Servicios externos con especialistas" data-en="External services with specialists">Servicios externos con especialistas</h3>
+            <p data-es="Colaboramos con especialistas externos."
+             data-en="We partner with external specialists.">Colaboramos con especialistas externos para ofrecer la mejor atención cuando tu mascota lo necesita.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <img class="card-icon-img" src="assets/servicio_cirujia.png" alt="Imagen aparato veterinario">
           </div>
           <div>
             <h3 data-es="Cirugía" data-en="Surgery">Cirugía</h3>
-            <p data-es="Quirófano equipado con tecnología moderna y monitoreo."
-             data-en="Modern operating room with full monitoring.">Quirófano equipado con tecnología moderna y monitoreo.</p>
+            <p data-es="Desde odontología hasta cualquier tipo de cirugía."
+             data-en="From dentistry to any type of surgery.">Desde odontología hasta cualquier tipo de cirugía.</p>
           </div>
         </div>
+
 
         <div class="card">
           <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z"/></svg>
+            <img class="card-icon-img" src="assets/servicio_laboratorioPropio.png" alt="Imagen microscopio">
           </div>
           <div>
-            <h3 data-es="Odontología" data-en="Dental Care">Odontología</h3>
-            <p data-es="Limpieza, extracciones y cuidado dental profesional."
-             data-en="Cleaning, extractions and professional dental care.">Limpieza, extracciones y cuidado dental profesional.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-          </div>
-          <div>
-            <h3 data-es="Emergencias 24/7" data-en="24/7 Emergencies">Emergencias 24/7</h3>
-            <p data-es="Atención urgente cuando más lo necesitas."
-             data-en="Urgent care when you need it most.">Atención urgente cuando más lo necesitas.</p>
-          </div>
-        </div>
-
-<div class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
-          </div>
-          <div>
-            <h3 data-es="Especialistas" data-en="Specialists">Servicios externos con especialistas</h3>
-            <p data-es="Colaboramos con especialistas externos."
-             data-en="We partner with external specialists.">Colaboramos con especialistas externos para ofrecer atención avanzada cuando tu mascota lo necesita.</p>
+            <h3 data-es="Laboratorio interno" data-en="Internal laboratory">Cirugía</h3>
+            <p data-es="Contamos con laboratorio interno y equipos modernos."
+             data-en="We have an in-house laboratory and modern equipment.">Contamos con laboratorio interno y equipos modernos.</p>
           </div>
         </div>
 
@@ -255,20 +257,48 @@
 
 
 
-  <!-- ===================== CAMPAÑAS Y PROMOCIONES ===================== -->
-  <section id="promociones" class="promociones section-primary">
+  <!-- ===================== PLANES DE SALUD ===================== -->
+  <section id="planes" class="planes section-primary">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow"
-           data-es="Cuidamos su salud con precios especiales"
-           data-en="We care for their health with special prices">Cuidamos su salud con precios especiales</p>
-        <h2 data-es="Campañas y promociones" data-en="Campaigns and promotions">Campañas y promociones</h2>
+        <h2 data-es="Planes de salud" data-en="Health plans">Planes de salud</h2>
       </div>
 
       <div class="campaign-grid">
 
-        <!-- ===== Campaña: Limpieza dental ===== -->
-        <a href="promos/limpieza-dental.html" class="campaign-card">
+
+
+        <a class="campaign-card" href="planes/miPrimeraHuellitaPerruna.html">
+          <img class="campaign-img" src="assets/puppies.jpg" alt="Perro alegre" loading="lazy" />
+          <div class="campaign-body">
+            <h3 data-es="Plan: Mi primera huellita perruna" data-en="Mi primera huellita perruna">Mi primera huellita perruna</h3>
+            <p data-es="Mantén a tu compañero/a protegido/a frente a las enfermedades más comunes. Para el inicio de una vida juntos, un precio especial para cuando más vulnerable es."
+               data-en="Keep your companion protected against the most common illnesses. For the start of your life together, a special price for when they are most vulnerable.">
+               Mantén a tu compañero/a protegido/a frente a las enfermedades más comunes. Para el inicio de una vida juntos, un precio especial para cuando más vulnerable es.</p>
+          </div>
+          <span class="campaign-cta" data-es="Más info" data-en="More info">Más info</span>
+        </a>
+
+
+
+        <a class="campaign-card" href="planes/miPrimeraHuellitaGatuna.html">
+          <img class="campaign-img" src="assets/kittens.jpg" alt="Gato alegre" loading="lazy" />
+          <div class="campaign-body">
+            <h3 data-es="Plan: Mi primera huellita gatuna" data-en="Mi primera huellita gatuna">Mi primera huellita gatuna</h3>
+              <p data-es="Mantén a tu compañero/a protegido/a frente a las enfermedades más comunes. Para el inicio de una vida juntos, un precio especial para cuando más vulnerable es."
+               data-en="Keep your companion protected against the most common illnesses. For the start of your life together, a special price for when they are most vulnerable.">
+               Mantén a tu compañero/a protegido/a frente a las enfermedades más comunes. Para el inicio de una vida juntos, un precio especial para cuando más vulnerable es.</p>
+          </div>
+          <span class="campaign-cta" data-es="Más info" data-en="More info">Más info</span>
+        </a>
+
+
+
+
+<!--
+
+
+        <a href="planes/limpieza-dental.html" class="campaign-card">
           <img class="campaign-img" src="assets/LimpiezaDental.png" alt="Limpieza dental" loading="lazy" />
           <div class="campaign-body">
             <h3 data-es="Limpieza dental" data-en="Dental cleaning">Limpieza dental</h3>
@@ -279,8 +309,8 @@
         </a>
 
 
-        <!-- ===== Campaña: Esterilización ===== -->
-        <a href="promos/esterilizacion.html" class="campaign-card">
+
+        <a href="planes/esterilizacion.html" class="campaign-card">
           <img class="campaign-img" src="assets/Esterilizacion.jpg" alt="Esterilizacion" loading="lazy" />
           <div class="campaign-body">
             <h3 data-es="Esterilización" data-en="Sterilization">Esterilización</h3>
@@ -291,8 +321,8 @@
         </a>
 
 
-        <!-- ===== Campaña: Vacunación ===== -->
-        <a href="promos/vacunacion.html" class="campaign-card">
+
+        <a href="planes/vacunacion.html" class="campaign-card">
           <img class="campaign-img" src="assets/vacunacion.png" alt="Vacunación" loading="lazy" />
           <div class="campaign-body">
             <h3 data-es="Vacunación" data-en="Vaccinations">Vacunación</h3>
@@ -301,7 +331,7 @@
           </div>
           <span class="campaign-cta" data-es="Más info" data-en="More info">Más info</span>
         </a>
-
+-->
 
       </div>
     </div>
@@ -352,13 +382,18 @@
            data-en="More than a clinic, a family">Más que una clínica, una familia</p>
         <h2 data-es="Sobre HUELLA" data-en="About HUELLA">Sobre HUELLA</h2>
         <p class="lead"
-           data-es="En HUELLA creemos que cada mascota merece el mejor cuidado."
-           data-en="At HUELLA we believe every pet deserves the best care.">
-           En HUELLA creemos que cada mascota merece el mejor cuidado.</p>
+           data-es="En HUELLA creemos que cada animal merece el mejor cuidado."
+           data-en="At HUELLA we believe every animal deserves the best care.">
+           En HUELLA creemos que cada animal merece el mejor cuidado.</p>
         <p class="lead"
            data-es="Nuestro equipo combina experiencia, tecnología y un trato cercano para que os sintáis como en casa."
            data-en="Our team blends experience, technology and a personal touch so you feel like at home.">
            Nuestro equipo combina experiencia, tecnología y un trato cercano para que tu compañero peludo se sienta como en casa.</p>
+
+        <p class="lead"
+           data-es="Este proyecto surge con la vocacion de cuidar y acompañar a quienes más queremos, e inspirada por todos aquellos que han dejado su huella en nuestro camino."
+           data-en="This project arises with the vocation to care for and accompany those we love most, and inspired by all those who have left their mark on our path.">
+           Este proyecto surge con la vocacion de cuidar y acompañar a quienes más queremos, e inspirada por todos aquellos que han dejado su huella en nuestro camino.</p>
         
            <!--
         <div class="values-grid">
@@ -387,16 +422,8 @@
       </div>
     </div>
 
-      <!-- ===================== GALERÍA =====================
-           CÓMO AÑADIR / QUITAR FOTOS:
-           Cada foto es un <button class="gallery-item"> con una <img> dentro.
-           - Para AÑADIR: copia un bloque <button class="gallery-item">...</button>
-             y cambia el src y el alt.
-           - Para QUITAR: borra ese bloque.
-           El carrusel se ajusta solo al número de fotos.
-           Muestra 3 a la vez (2 en tablet, 1 en móvil) y avanza de 1 en 1.
-           Al hacer clic en una foto, se abre ampliada (lightbox).
-      -->
+
+<!-- ===================== GALERÍA ===================== -->
       <div class="gallery" data-gallery>
         <button class="gallery-arrow gallery-prev" aria-label="Anterior" data-gallery-prev>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
@@ -452,7 +479,7 @@
 
 
 
-  <!-- ===================== EQUIPO ===================== -->
+<!-- ===================== EQUIPO ===================== -->
   <section id="equipo" class="equipo section-tint">
     <div class="container">
       <div class="section-header">
@@ -464,31 +491,106 @@
 
       <div class="team-grid">
 
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/Victor2.png">
+        <button type="button" class="team-card-trigger" data-team-target="victor">
+          <div class="team-card">
+            <div class="team-photo">
+              <img src="assets/v recortada.png" alt="Víctor Zomeño">
+            </div>
+            <div class="team-info">
+              <h3>Víctor Zomeño</h3>
+              <p data-es="Veterinario y cofundador Clinica Huella" data-en="Veterinarian and co-founder of Clinica Huella">
+                Veterinario y cofundador Clinica Huella</p>
+            </div>
           </div>
-          <div class="team-info">
-            <h3>Víctor Zomeño</h3>
-            <p data-es="Cirujano veterinario" data-en=" Surgeon veterinary">Cirujano Veterinario</p>
-          </div>
-        </div>
+        </button>
 
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/Cristina2.png">
+        <button type="button" class="team-card-trigger" data-team-target="cristina">
+          <div class="team-card">
+            <div class="team-photo">
+              <img src="assets/c recortada.png" alt="Cristina Listón">
+            </div>
+            <div class="team-info">
+              <h3>Cristina Listón</h3>
+              <p data-es="Enfermera veterinaria y cofundadora Clinica Huella" data-en="Veterinary nurse and co-founder of Clinica Huella">
+                Enfermera veterinaria y cofundadora Clinica Huella</p>
+            </div>
           </div>
-          <div class="team-info">
-            <h3>Cristina Listón</h3>
-            <p data-es="Auxiliar clínica" data-en="Clinical assistant">Auxiliar veterinaria</p>
-          </div>
-        </div>
+        </button>
 
       </div>
     </div>
   </section>
 
+<!-- Modal de equipo (biografía extensa). No tocar la estructura. -->
+  <div class="team-modal" data-team-modal hidden>
+    <div class="team-modal-card">
+      <button class="team-modal-close" aria-label="Cerrar" data-team-modal-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
 
+      <div class="team-modal-panel" data-team-panel="victor">
+        <img class="team-modal-photo" src="assets/v recortada.png" alt="Víctor Zomeño">
+        <h3>Víctor Zomeño</h3>
+        <p class="team-modal-role"
+           data-es="Veterinario y cofundador Clínica Huella"
+           data-en="Veterinarian and co-founder of Clínica Huella">Veterinario y cofundador Clínica Huella</p>
+        <div class="team-modal-bio">
+
+          <p data-es="Desde que era niño tuvo claro que quería dedicar su vida al cuidado de los animales. Esa vocación le llevó a estudiar Veterinaria y, desde entonces, ha tenido la suerte de dedicarse a una profesión que le apasiona cada día."
+             data-en="Since he was a child, he knew he wanted to dedicate his life to caring for animals. That calling led him to study Veterinary Medicine, and ever since, he has been fortunate to work in a profession he is passionate about every day.">Desde que era niño tuvo claro que quería dedicar su vida al cuidado de los animales. Esa vocación le llevó a estudiar Veterinaria y, desde entonces, ha tenido la suerte de dedicarse a una profesión que le apasiona cada día.</p>
+
+          <p data-es="A lo largo de su trayectoria ha trabajado en clínica de pequeños animales, cirugía y atención de urgencias, además de asumir responsabilidades de dirección y gestión de equipos. Estas experiencias le han permitido desarrollar una visión completa de la profesión y reafirmar algo que considera fundamental: ofrecer una medicina de calidad sin perder nunca la cercanía y el trato humano."
+             data-en="Throughout his career he has worked in small animal clinics, surgery and emergency care, as well as taking on leadership and team management responsibilities. These experiences have given him a complete view of the profession and reaffirmed something he considers essential: providing quality medicine without ever losing closeness and a human touch.">A lo largo de su trayectoria ha trabajado en clínica de pequeños animales, cirugía y atención de urgencias, además de asumir responsabilidades de dirección y gestión de equipos. Estas experiencias le han permitido desarrollar una visión completa de la profesión y reafirmar algo que considera fundamental: ofrecer una medicina de calidad sin perder nunca la cercanía y el trato humano.</p>
+
+          <p data-es="Sus principales áreas de interés son la medicina interna y la cirugía, especialmente todo lo relacionado con el diagnóstico y la búsqueda de soluciones que mejoren la calidad de vida de sus pacientes. Por ello, mantiene un firme compromiso con la formación continua, participando regularmente en congresos, cursos y jornadas veterinarias para mantenerse al día de los últimos avances de la profesión."
+             data-en="His main areas of interest are internal medicine and surgery, especially everything related to diagnosis and finding solutions that improve his patients' quality of life. For this reason, he maintains a strong commitment to continuous training, regularly attending veterinary congresses, courses and conferences to stay up to date with the latest advances in the profession.">Sus principales áreas de interés son la medicina interna y la cirugía, especialmente todo lo relacionado con el diagnóstico y la búsqueda de soluciones que mejoren la calidad de vida de sus pacientes. Por ello, mantiene un firme compromiso con la formación continua, participando regularmente en congresos, cursos y jornadas veterinarias para mantenerse al día de los últimos avances de la profesión.</p>
+
+          <p data-es="Como tutor de animales, también conoce la preocupación, las dudas y la responsabilidad que implica cuidar de un compañero de vida. Por eso, su objetivo es que cada familia se sienta escuchada, acompañada y respaldada en cada etapa de la vida de su peludo."
+             data-en="As a pet owner himself, he also understands the worry, the doubts and the responsibility involved in caring for a life companion. That's why his goal is for every family to feel heard, accompanied and supported at every stage of their pet's life.">Como tutor de animales, también conoce la preocupación, las dudas y la responsabilidad que implica cuidar de un compañero de vida. Por eso, su objetivo es que cada familia se sienta escuchada, acompañada y respaldada en cada etapa de la vida de su peludo.</p>
+
+          <p data-es="Además, está especialmente comprometido con la conservación y protección de la fauna silvestre, una sensibilidad que forma parte de su manera de entender la profesión veterinaria y del respeto que siente por todos los animales."
+             data-en="He is also especially committed to wildlife conservation and protection, a sensitivity that is part of how he understands the veterinary profession and the respect he feels for all animals.">Además, está especialmente comprometido con la conservación y protección de la fauna silvestre, una sensibilidad que forma parte de su manera de entender la profesión veterinaria y del respeto que siente por todos los animales.</p>
+
+          <p data-es="En el ámbito personal, comparte su día a día con Kuma, su fiel compañero de cuatro patas y una fuente constante de inspiración para seguir dedicándose con pasión a la profesión que siempre soñó ejercer."
+             data-en="On a personal level, he shares his day-to-day life with Kuma, his loyal four-legged companion and a constant source of inspiration to keep pursuing, with passion, the profession he always dreamed of practicing.">En el ámbito personal, comparte su día a día con Kuma, su fiel compañero de cuatro patas y una fuente constante de inspiración para seguir dedicándose con pasión a la profesión que siempre soñó ejercer.</p>
+
+        </div>
+      </div>
+
+      <div class="team-modal-panel" data-team-panel="cristina" hidden>
+        <img class="team-modal-photo" src="assets/c recortada.png" alt="Cristina Listón">
+        <h3>Cristina Listón</h3>
+        <p class="team-modal-role"
+           data-es="Enfermera veterinaria y cofundadora Clínica Huella"
+           data-en="Veterinary nurse and co-founder of Clínica Huella">Enfermera veterinaria y cofundadora Clínica Huella</p>
+        <div class="team-modal-bio">
+
+          <p data-es="Cristina es enfermera veterinaria, cofundadora de Clínica Huella y un pilar fundamental de este proyecto. Cuenta con más de siete años de experiencia en el sector, desarrollando su labor tanto en clínicas como en hospitales veterinarios de referencia, donde ha adquirido una sólida experiencia en diferentes áreas."
+             data-en="Cristina is a veterinary nurse, co-founder of Clínica Huella and a fundamental pillar of this project. She has over seven years of experience in the sector, having worked in both clinics and leading veterinary hospitals, where she has gained solid experience in different areas.">Cristina es enfermera veterinaria, cofundadora de Clínica Huella y un pilar fundamental de este proyecto. Cuenta con más de siete años de experiencia en el sector, desarrollando su labor tanto en clínicas como en hospitales veterinarios de referencia, donde ha adquirido una sólida experiencia en diferentes áreas.</p>
+
+          <p data-es="Sus grandes pasiones dentro de la medicina son la oncología y el servicio de urgencias, áreas que requieren una atención constante, capacidad de reacción y una gran dedicación a cada paciente."
+             data-en="Her great passions within medicine are oncology and emergency care, areas that require constant attention, quick reaction and great dedication to each patient.">Sus grandes pasiones dentro de la medicina son la oncología y el servicio de urgencias, áreas que requieren una atención constante, capacidad de reacción y una gran dedicación a cada paciente.</p>
+
+          <p data-es="Es nuestra defensora de la medicina y del manejo Cat Friendly, convencida de que reducir el estrés durante la consulta es una prioridad. Por eso, dedica especial atención a que cada paciente felino viva la visita de la forma más tranquila y respetuosa posible."
+             data-en="She is our champion of Cat Friendly medicine and handling, convinced that reducing stress during the visit is a priority. That's why she pays special attention to making sure every feline patient experiences the visit as calmly and respectfully as possible.">Es nuestra defensora de la medicina y del manejo Cat Friendly, convencida de que reducir el estrés durante la consulta es una prioridad. Por eso, dedica especial atención a que cada paciente felino viva la visita de la forma más tranquila y respetuosa posible.</p>
+
+          <p data-es="Comprometida con ofrecer siempre la mejor atención posible, mantiene una formación continua mediante la asistencia regular a congresos, cursos y jornadas veterinarias, además de participar en la elaboración de pósteres científicos y publicaciones especializadas. Esta actualización constante le permite mantenerse al día de los últimos avances en medicina veterinaria y seguir ofreciendo una atención basada en la evidencia y en la mejora continua."
+             data-en="Committed to always offering the best possible care, she pursues continuous training by regularly attending veterinary congresses, courses and conferences, as well as contributing to scientific posters and specialized publications. This constant updating allows her to stay current with the latest advances in veterinary medicine and continue providing care based on evidence and continuous improvement.">Comprometida con ofrecer siempre la mejor atención posible, mantiene una formación continua mediante la asistencia regular a congresos, cursos y jornadas veterinarias, además de participar en la elaboración de pósteres científicos y publicaciones especializadas. Esta actualización constante le permite mantenerse al día de los últimos avances en medicina veterinaria y seguir ofreciendo una atención basada en la evidencia y en la mejora continua.</p>
+
+          <p data-es="Además, está profundamente comprometida con el bienestar animal y especialmente sensibilizada con la labor de rescate, protección y cuidado de los animales más vulnerables, colaborando activamente con protectoras."
+             data-en="She is also deeply committed to animal welfare and especially sensitive to the rescue, protection and care of the most vulnerable animals, actively collaborating with animal shelters.">Además, está profundamente comprometida con el bienestar animal y especialmente sensibilizada con la labor de rescate, protección y cuidado de los animales más vulnerables, colaborando activamente con protectoras.</p>
+
+          <p data-es="En el ámbito personal, Cristina comparte su vida con Antia, su fiel compañera de cuatro patas y una de las responsables de que este proyecto exista."
+             data-en="On a personal level, Cristina shares her life with Antia, her loyal four-legged companion and one of the reasons this project exists.">En el ámbito personal, Cristina comparte su vida con Antia, su fiel compañera de cuatro patas y una de las responsables de que este proyecto exista.</p>
+
+          <p data-es="Cuando crucéis la puerta de nuestra clínica, probablemente será ella quien os reciba con una sonrisa, os acompañe durante vuestra visita y se asegure de que tanto vosotros como vuestros compañeros de cuatro patas recibáis una atención cercana, segura y de calidad."
+             data-en="When you walk through the door of our clinic, chances are she'll be the one to greet you with a smile, accompany you during your visit and make sure that both you and your four-legged companions receive close, safe and quality care.">Cuando crucéis la puerta de nuestra clínica, probablemente será ella quien os reciba con una sonrisa, os acompañe durante vuestra visita y se asegure de que tanto vosotros como vuestros compañeros de cuatro patas recibáis una atención cercana, segura y de calidad.</p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 
 
@@ -519,10 +621,16 @@
 
         <div class="why-item">
           <div class="why-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="16" rx="5.5" ry="4.5"/>
+              <ellipse cx="4.5" cy="9" rx="2" ry="2.5"/>
+              <ellipse cx="9.5" cy="5.5" rx="2" ry="2.5"/>
+              <ellipse cx="14.5" cy="5.5" rx="2" ry="2.5"/>
+              <ellipse cx="19.5" cy="9" rx="2" ry="2.5"/>
+            </svg>          
           </div>
-          <h3 data-es="Emergencias 24/7" data-en="24/7 Emergencies">Emergencias 24/7</h3>
-          <p data-es="Disponibles cuando nos necesites." data-en="Available whenever you need us.">Disponibles cuando nos necesites.</p>
+          <h3 data-es="Cat Friendly" data-en="Cat Friendly">CatFrienldy</h3>
+          <p data-es="Su tranquilidad primero." data-en="Your peace of mind comes first.">Su tranquilidad primero.</p>
         </div>
 
         <div class="why-item">
@@ -530,7 +638,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
           </div>
           <h3 data-es="Equipo experimentado" data-en="Experienced team">Equipo experimentado</h3>
-          <p data-es="Veterinarios certificados y empáticos." data-en="Certified and empathetic vets.">Veterinarios certificados y empáticos.</p>
+          <p data-es="En formación veterinaria constante." data-en="In constant veterinary training.">
+            En formación veterinaria constante.</p>
         </div>
 
         <div class="why-item">
@@ -546,7 +655,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
           </div>
           <h3 data-es="Trato con amor" data-en="Loving care">Trato con amor</h3>
-          <p data-es="Tu mascota como prioridad." data-en="Your pet is our priority.">Tu mascota como prioridad.</p>
+          <p data-es="Su cuidado nuestra prioridad." data-en="Your care is our priority.">Su cuidado nuestra prioridad.</p>
         </div>
 
       </div>
@@ -717,7 +826,7 @@
           <div id="llegar">
             
             <a class="map-link" href="https://www.google.com/maps/place/Huella+Cl%C3%ADnica+Veterinaria/@39.3925584,-0.704417,77m/data=!3m1!1e3!4m6!3m5!1s0xd60fd2c46ced475:0xc6f75f079b7dee36!8m2!3d39.3926446!4d-0.7044894!16s%2Fg%2F11zfns4nxr!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-              <img class="googleMapsScreenshot" src="assets/GoogleMapsScreenshotEntrance.jpg">
+              <img class="googleMapsScreenshot" src="assets/GoogleMapsScreenshotEntrance2.jpg">
               <span class="masInfo-badge" data-es="Ver en Google Maps" data-en="View on Google Maps">Ver en Google Maps</span>
             </a>
             </div>

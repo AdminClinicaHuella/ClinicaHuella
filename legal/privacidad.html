@@ -7,26 +7,58 @@
   <meta name="description" content="Política de privacidad de Clínica Veterinaria HUELLA." />
   <meta name="robots" content="noindex" />
 
+  <link rel="stylesheet" href="../styles.css" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" />  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
+  <!-- ===================== HEADER ===================== -->
   <header class="header">
     <div class="container header-inner">
-      <a href="../index.html" class="logo">
-        <span class="logo-text">HUELLA</span>
+      <a href="https://adminclinicahuella.github.io/ClinicaHuella/" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <img class="nav-logo" src="../assets/LogotipoHuella_Horizontal_Negro@2x.png">
+        </span>
+        <!--<span class="logo-text" data-es="Clínica veterinaria HUELLA" data-en="HUELLA veterinary clinic"  >Clínica veterinaria HUELLA</span>-->
       </a>
+
+      <nav class="nav-desktop" aria-label="Principal">
+        <a href="../#inicio"     data-es="Inicio"         data-en="Home">Inicio</a>
+        <a href="../#servicios"  data-es="Servicios"      data-en="Services">Servicios</a>
+        <a href="../#planes"  data-es="Planes de salud"      data-en="Health plans">Planes de salud</a>
+        <a href="../#sobre"      data-es="Sobre nosotros" data-en="About us">Sobre nosotros</a>
+        <!--<a href="../#equipo"     data-es="Equipo"         data-en="Team">Equipo</a>-->
+        <!--<a href="../#contacto"   data-es="Contacto"       ct">Contacto</a>-->
+        <a href="../#llegar"     data-es="Cómo llegar"    data-en="Get directions">Cómo llegar</a>
+      </nav>
+
       <div class="header-actions">
         <button id="lang-toggle" class="lang-btn" aria-label="Cambiar idioma / Toggle language">
           <span id="lang-es">ES</span><span class="lang-sep">/</span><span id="lang-en">EN</span>
         </button>
-        <a href="../index.html#contacto" class="btn btn-primary btn-cta" data-es="Contacta con nosotros" data-en="Contact us">Contacta con nosotros</a>
+        <a href="../#contacto" class="btn btn-primary btn-cta" data-es="Contacta con nosotros" data-en="Contact us">Pedir Cita</a>
+        <button id="menu-toggle" class="menu-btn" aria-label="Menú" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
       </div>
     </div>
+
+    <nav id="nav-mobile" class="nav-mobile container" aria-label="Móvil">
+      <a href="../#inicio"  class="nav-button"  data-es="Inicio"         data-en="Home">Inicio</a>
+      <a href="../#servicios" class="nav-button" data-es="Servicios"      data-en="Services">Servicios</a>
+      <a href="../#planes" class="nav-button" data-es="Planes de salud"      data-en="Health plans">Planes de salud</a>
+      <a href="../#sobre" class="nav-button"    data-es="Sobre nosotros" data-en="About us">Sobre nosotros</a>
+      <!--<a href="../#equipo"  class="nav-button"  data-es="Equipo"         data-en="Team">Equipo</a>-->
+      <!--<a href="#contacto" class="nav-button" data-es="Contacto"       data-en="Contact">Contacto</a>-->
+      <a href="../#llegar" class="nav-button"   data-es="Cómo llegar"    data-en="Get directions">Cómo llegar</a>
+      <a href="../#contacto" class="btn btn-primary nav-mobile-cta" data-es="Contacta con nosotros" data-en="Contact us">Pedir cita</a>
+
+    </nav>
   </header>
 
   <section class="section">
@@ -37,70 +69,148 @@
 
       <h1 data-es="Política de privacidad" data-en="Privacy policy">Política de privacidad</h1>
 
-      <!-- ===========================================================
-           AVISO: ESTO ES UNA PLANTILLA. Antes de publicar, sustituye
-           todos los textos entre [CORCHETES] por los datos reales de
-           la clínica. Lo ideal es generar este texto con una
-           herramienta RGPD o con una gestoría/abogado, usando los
-           datos reales del responsable del tratamiento.
-      =========================================================== -->
+      <p data-es="En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD), de la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), y demás normativa aplicable, CLÍNICA HUELLA, S.L. informa a los usuarios sobre el tratamiento de sus datos personales."
+         data-en="In compliance with Regulation (EU) 2016/679 of the European Parliament and of the Council (GDPR), Spanish Organic Law 3/2018 on Personal Data Protection and the guarantee of digital rights (LOPDGDD), and other applicable regulations, CLÍNICA HUELLA, S.L. informs users about the processing of their personal data.">En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD), de la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), y demás normativa aplicable, CLÍNICA HUELLA, S.L. informa a los usuarios sobre el tratamiento de sus datos personales.</p>
 
-      <p class="legal-updated" data-es="Última actualización: [FECHA]" data-en="Last updated: [DATE]">Última actualización: [FECHA]</p>
-
-      <h2>1. Responsable del tratamiento</h2>
+      <h2 data-es="1. Responsable del tratamiento" data-en="1. Data controller">1. Responsable del tratamiento</h2>
       <p>
-        [NOMBRE / RAZÓN SOCIAL DE LA CLÍNICA]<br />
-        NIF/CIF: [NIF]<br />
-        Domicilio: Av. Bautista Soler y Crespo 49, Turís, 46389 Valencia<br />
-        Email: clinicahuella@gmail.com<br />
-        Teléfono: (+34) 711 22 48 53
+        <span data-es="Responsable: " data-en="Controller: ">Responsable: </span>CLÍNICA HUELLA, S.L.<br />
+        CIF: B23902455<br />
+        <span data-es="Dirección: " data-en="Address: ">Dirección: </span>Avenida Bautista Soler i Crespo, 49, Bajo, 46389 Turís (Valencia)<br />
+        <span data-es="Teléfono: " data-en="Phone: ">Teléfono: </span>711 224 853<br />
+        <span data-es="Correo electrónico: " data-en="Email: ">Correo electrónico: </span>clinicahuella@gmail.com
       </p>
 
-      <h2>2. ¿Qué datos recogemos y con qué finalidad?</h2>
-      <p>
-        A través del formulario de contacto de esta web recogemos los datos que nos
-        facilitas voluntariamente: nombre, correo electrónico, teléfono y el mensaje
-        que escribes. La finalidad es atender tu consulta o solicitud de cita y
-        ponernos en contacto contigo.
-      </p>
+      <h2 data-es="2. Finalidad del tratamiento" data-en="2. Purpose of processing">2. Finalidad del tratamiento</h2>
+      <p data-es="Los datos personales facilitados por los usuarios serán tratados con las siguientes finalidades:"
+         data-en="Personal data provided by users will be processed for the following purposes:">Los datos personales facilitados por los usuarios serán tratados con las siguientes finalidades:</p>
+      <ul class="legal-list">
+        <li data-es="Atender consultas realizadas mediante el formulario de contacto, correo electrónico o teléfono."
+            data-en="Handling queries made through the contact form, email or phone.">Atender consultas realizadas mediante el formulario de contacto, correo electrónico o teléfono.</li>
+        <li data-es="Gestionar solicitudes de cita y prestar los servicios veterinarios solicitados."
+            data-en="Managing appointment requests and providing the veterinary services requested.">Gestionar solicitudes de cita y prestar los servicios veterinarios solicitados.</li>
+        <li data-es="Gestionar la relación administrativa y comercial con clientes."
+            data-en="Managing the administrative and commercial relationship with clients.">Gestionar la relación administrativa y comercial con clientes.</li>
+        <li data-es="Cumplir las obligaciones legales derivadas de la prestación de los servicios."
+            data-en="Complying with legal obligations arising from the provision of services.">Cumplir las obligaciones legales derivadas de la prestación de los servicios.</li>
+        <li data-es="Enviar información sobre los servicios de la clínica cuando el usuario haya prestado su consentimiento o exista una base legal que lo permita."
+            data-en="Sending information about the clinic's services when the user has given consent or there is a legal basis allowing it.">Enviar información sobre los servicios de la clínica cuando el usuario haya prestado su consentimiento o exista una base legal que lo permita.</li>
+      </ul>
 
-      <h2>3. Legitimación</h2>
-      <p>
-        La base legal para tratar tus datos es tu consentimiento, que otorgas al
-        marcar la casilla de aceptación y enviar el formulario.
-      </p>
+      <h2 data-es="3. Legitimación para el tratamiento" data-en="3. Legal basis for processing">3. Legitimación para el tratamiento</h2>
+      <p data-es="Las bases jurídicas del tratamiento son:"
+         data-en="The legal bases for processing are:">Las bases jurídicas del tratamiento son:</p>
+      <ul class="legal-list">
+        <li data-es="El consentimiento otorgado por el usuario."
+            data-en="The consent given by the user.">El consentimiento otorgado por el usuario.</li>
+        <li data-es="La ejecución de un contrato o la aplicación de medidas precontractuales solicitadas por el interesado."
+            data-en="The performance of a contract or the application of pre-contractual measures requested by the data subject.">La ejecución de un contrato o la aplicación de medidas precontractuales solicitadas por el interesado.</li>
+        <li data-es="El cumplimiento de obligaciones legales."
+            data-en="Compliance with legal obligations.">El cumplimiento de obligaciones legales.</li>
+        <li data-es="El interés legítimo de CLÍNICA HUELLA, S.L. cuando resulte aplicable conforme a la normativa vigente."
+            data-en="The legitimate interest of CLÍNICA HUELLA, S.L. where applicable under current regulations.">El interés legítimo de CLÍNICA HUELLA, S.L. cuando resulte aplicable conforme a la normativa vigente.</li>
+      </ul>
 
-      <h2>4. ¿Durante cuánto tiempo conservamos tus datos?</h2>
-      <p>
-        Conservaremos tus datos durante el tiempo necesario para atender tu solicitud
-        y, posteriormente, durante los plazos legalmente exigibles. Cuando dejen de
-        ser necesarios, se eliminarán.
-      </p>
+      <h2 data-es="4. Conservación de los datos" data-en="4. Data retention">4. Conservación de los datos</h2>
+      <p data-es="Los datos personales se conservarán durante el tiempo necesario para cumplir con la finalidad para la que fueron recabados y, posteriormente, durante los plazos legalmente establecidos para atender posibles responsabilidades legales, fiscales o administrativas."
+         data-en="Personal data will be kept for as long as necessary to fulfil the purpose for which it was collected and, afterwards, for the periods legally established to address possible legal, tax or administrative liabilities.">Los datos personales se conservarán durante el tiempo necesario para cumplir con la finalidad para la que fueron recabados y, posteriormente, durante los plazos legalmente establecidos para atender posibles responsabilidades legales, fiscales o administrativas.</p>
 
-      <h2>5. Destinatarios</h2>
-      <p>
-        Los datos del formulario se gestionan a través del servicio Formspree, que
-        actúa como encargado del tratamiento para hacernos llegar tu mensaje por
-        correo electrónico. No se cederán a otros terceros salvo obligación legal.
-      </p>
+      <h2 data-es="5. Destinatarios de los datos" data-en="5. Data recipients">5. Destinatarios de los datos</h2>
+      <p data-es="Con carácter general, los datos no serán comunicados a terceros, salvo obligación legal o cuando sea necesario para la prestación del servicio mediante proveedores que actúen como encargados del tratamiento y que ofrezcan las garantías exigidas por la normativa de protección de datos."
+         data-en="As a general rule, data will not be disclosed to third parties, except where legally required or when necessary for the provision of the service through providers acting as data processors that offer the guarantees required by data protection regulations.">Con carácter general, los datos no serán comunicados a terceros, salvo obligación legal o cuando sea necesario para la prestación del servicio mediante proveedores que actúen como encargados del tratamiento y que ofrezcan las garantías exigidas por la normativa de protección de datos.</p>
+      <p data-es="En concreto, los datos facilitados a través del formulario de contacto de esta web son gestionados por el proveedor Formspree, que actúa como encargado del tratamiento con la única finalidad de hacernos llegar tu mensaje por correo electrónico."
+         data-en="Specifically, the data provided through this website's contact form is managed by the provider Formspree, which acts as a data processor solely for the purpose of delivering your message to us by email.">En concreto, los datos facilitados a través del formulario de contacto de esta web son gestionados por el proveedor Formspree, que actúa como encargado del tratamiento con la única finalidad de hacernos llegar tu mensaje por correo electrónico.</p>
 
-      <h2>6. Tus derechos</h2>
+      <h2 data-es="6. Derechos de los interesados" data-en="6. Rights of data subjects">6. Derechos de los interesados</h2>
+      <p data-es="Los usuarios podrán ejercer en cualquier momento los siguientes derechos:"
+         data-en="Users may exercise the following rights at any time:">Los usuarios podrán ejercer en cualquier momento los siguientes derechos:</p>
+      <ul class="legal-list">
+        <li data-es="Derecho de acceso." data-en="Right of access.">Derecho de acceso.</li>
+        <li data-es="Derecho de rectificación." data-en="Right of rectification.">Derecho de rectificación.</li>
+        <li data-es="Derecho de supresión." data-en="Right of erasure.">Derecho de supresión.</li>
+        <li data-es="Derecho de oposición." data-en="Right to object.">Derecho de oposición.</li>
+        <li data-es="Derecho a la limitación del tratamiento." data-en="Right to restriction of processing.">Derecho a la limitación del tratamiento.</li>
+        <li data-es="Derecho a la portabilidad de los datos cuando sea aplicable." data-en="Right to data portability where applicable.">Derecho a la portabilidad de los datos cuando sea aplicable.</li>
+        <li data-es="Derecho a retirar el consentimiento otorgado." data-en="Right to withdraw consent given.">Derecho a retirar el consentimiento otorgado.</li>
+      </ul>
+      <p data-es="Para ejercer cualquiera de estos derechos podrá dirigirse a:"
+         data-en="To exercise any of these rights, you may contact:">Para ejercer cualquiera de estos derechos podrá dirigirse a:</p>
       <p>
-        Puedes ejercer en cualquier momento tus derechos de acceso, rectificación,
-        supresión, oposición, limitación y portabilidad de tus datos, escribiendo a
-        clinicahuella@gmail.com. Si consideras que el tratamiento no se ajusta a la
-        normativa, puedes presentar una reclamación ante la Agencia Española de
-        Protección de Datos (www.aepd.es).
+        CLÍNICA HUELLA, S.L.<br />
+        Avenida Bautista Soler i Crespo, 49, Bajo<br />
+        46389 Turís (Valencia)
       </p>
+      <p data-es="o mediante correo electrónico a: clinicahuella@gmail.com"
+         data-en="or by email to: clinicahuella@gmail.com">o mediante correo electrónico a: clinicahuella@gmail.com</p>
+      <p data-es="La solicitud deberá ir acompañada de un documento acreditativo de la identidad del solicitante."
+         data-en="The request must be accompanied by a document proving the identity of the applicant.">La solicitud deberá ir acompañada de un documento acreditativo de la identidad del solicitante.</p>
+      <p data-es="Asimismo, si considera que el tratamiento de sus datos no se ajusta a la normativa vigente, podrá presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD)."
+         data-en="Likewise, if you consider that the processing of your data does not comply with current regulations, you may file a complaint with the Spanish Data Protection Agency (AEPD).">Asimismo, si considera que el tratamiento de sus datos no se ajusta a la normativa vigente, podrá presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD).</p>
 
-      <h2>7. Cambios en esta política</h2>
-      <p>
-        Podemos actualizar esta política de privacidad para adaptarla a cambios
-        normativos o de nuestros servicios. Te recomendamos revisarla periódicamente.
-      </p>
+      <h2 data-es="7. Medidas de seguridad" data-en="7. Security measures">7. Medidas de seguridad</h2>
+      <p data-es="CLÍNICA HUELLA, S.L. aplica las medidas técnicas y organizativas apropiadas para garantizar la confidencialidad, integridad, disponibilidad y seguridad de los datos personales tratados, evitando su pérdida, alteración, tratamiento o acceso no autorizado."
+         data-en="CLÍNICA HUELLA, S.L. applies appropriate technical and organisational measures to guarantee the confidentiality, integrity, availability and security of the personal data processed, preventing its loss, alteration, unauthorised processing or access.">CLÍNICA HUELLA, S.L. aplica las medidas técnicas y organizativas apropiadas para garantizar la confidencialidad, integridad, disponibilidad y seguridad de los datos personales tratados, evitando su pérdida, alteración, tratamiento o acceso no autorizado.</p>
+
+      <h2 data-es="8. Actualización de la Política de Privacidad" data-en="8. Updates to this Privacy Policy">8. Actualización de la Política de Privacidad</h2>
+      <p data-es="CLÍNICA HUELLA, S.L. podrá modificar la presente Política de Privacidad para adaptarla a novedades legislativas, jurisprudenciales o cambios en la actividad desarrollada. Las modificaciones serán publicadas en este mismo sitio web con la fecha de su última actualización."
+         data-en="CLÍNICA HUELLA, S.L. may modify this Privacy Policy to adapt it to legislative or case-law developments or changes in the activity carried out. Any modifications will be published on this same website along with the date of their last update.">CLÍNICA HUELLA, S.L. podrá modificar la presente Política de Privacidad para adaptarla a novedades legislativas, jurisprudenciales o cambios en la actividad desarrollada. Las modificaciones serán publicadas en este mismo sitio web con la fecha de su última actualización.</p>
 
     </div>
   </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <div>
+        <p class="footer-heading" data-es="Síguenos en Instagram" data-en="Follow us on Instagram">Síguenos</p>
+        <div class="social btn">
+
+          <a href="https://www.instagram.com/huella_cv/?hl=es" Target="_blank" aria-label="Instagram">
+            <img src="../assets/Instagram_Glyph_White.png">
+          </a>
+
+        </div>
+      </div>
+
+
+      <div class="footer-quicklinks">
+        <p class="footer-heading" data-es="Información legal" data-en="Legal">Información legal</p>
+        <ul class="footer-links">
+          <li><a href="../legal/privacidad.html"  data-es="Política de privacidad" data-en="Privacy policy">Política de privacidad</a></li>
+          <li><a href="../legal/aviso-legal.html" data-es="Aviso legal"            data-en="Legal notice">Aviso legal</a></li>
+        </ul>
+      </div>
+
+
+      <div>
+        <a href="https://adminclinicahuella.github.io/ClinicaHuella/">
+          <div class="footer-logo-container">
+            <img class="footer-logo" src="../assets/LogotipoHuella_Vertical_Verde@2x.png">
+          </div>
+          <p class="footer-tagline"
+            data-es="Av. Bautista Soler y Crespo 49, Turís, 46389 Valencia"
+            data-en="Av. Bautista Soler y Crespo 49, Turís, 46389 Valencia">Av. Bautista Soler y Crespo 49, Turís, 46389 Valencia</p>
+        </a>
+      </div>
+
+
+    </div>
+    <div class="container footer-bottom">
+      <span class="footer-copyright">
+        <span>©&nbsp;</span><span id="year"></span><span>&nbsp;HUELLA</span>
+      </span>
+
+      <p class="footer-credit">
+        <a href="https://davidmarpalez.com" target="_blank" rel="noopener">
+          <span data-es="Desarrollada por " data-en="Developed by ">Desarrollada por</span>
+          <span class="footer-DMP">D M P</span>
+        </a>
+      </p>
+    </div>
+  </footer>
+
 
   <script src="../app.js"></script>
 </body>
