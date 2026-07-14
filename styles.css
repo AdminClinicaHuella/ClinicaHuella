@@ -478,27 +478,25 @@ h1, h2, h3, .logo-text, .why-title {
 .card {
   display: flex;
   border-radius: 1.5rem; 
-
   background: var(--card);
   color: var(--foreground);
   padding: 1.5rem; 
 }
 
 .card-icon {
-  display: grid; 
-  place-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 4rem; 
   width: 4rem;
   border-radius: 1rem; 
   background: var(--secondary); 
-  color: var(--primary); 
   border: 2px solid var(--border); 
   margin-right: 1rem;
-  transition: all 0.2s;
 }
 
 .card-icon-img {
-  width: 50px;
+  min-width: 50px;
   height: auto;
 }
 
