@@ -23,6 +23,13 @@
   --font-display: "Poppins", system-ui, sans-serif;
 }
 
+.section {
+    display: block;
+    unicode-bidi: isolate;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
 .section-primary { position: relative; }
 .has-wave { position: relative; }
 
@@ -51,6 +58,7 @@
   .wave-top svg,
   .wave-bottom svg { height: 90px; }
 }
+
 
 /* ===== Reset ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -81,7 +89,24 @@ h1, h2, h3, .logo-text, .why-title {
 @media (min-width: 1150px) { .container { padding: 0 2rem; } }
 
 
-
+@keyframes llamarAtencion {
+  0%, 30%, 50%, 80%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  10% {
+    transform: scale(1.05);
+  }
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.02);
+  }
+  80% {
+    transform: scale(1);
+  }
+}
 
 
 
@@ -301,85 +326,46 @@ h1, h2, h3, .logo-text, .why-title {
 
 
 
-/* ===== Sections ===== */
-.planes { 
-  padding-top: 1rem; 
-  padding-bottom: 5rem; 
-}
- 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Sections ===== */
 .footer {
   padding-top: 3rem;
   padding-bottom: 1rem;
 }
 
 
-
-
-
-
-
-
-.section-tint { background: color-mix(in oklab, var(--secondary) 40%, transparent); }
-.section-header { text-align: center; max-width: 42rem; margin: 0 auto 3rem; }
-
-
-.section-eyebrow { 
-  font-size: 0.875rem; 
-  font-weight: 600; 
-  color: var(--primary);
-  text-transform: uppercase; 
-  letter-spacing: 0.05em; 
+.legal-page { max-width: 48rem; }
+.legal-page h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+@media (min-width: 640px) { .legal-page h1 { font-size: 2.5rem; } }
+.legal-page h2 { font-size: 1.25rem; font-weight: 700; margin: 2rem 0 0.5rem; }
+.legal-page p { color: var(--foreground); margin-bottom: 0.75rem; line-height: 1.6; }
+.legal-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0 0 1rem;
+  color: var(--foreground);
+  line-height: 1.6;
 }
-
-
-
-.section-header h2 { font-size: 2rem; font-weight: 800; }
-@media (min-width: 640px) { .section-header h2 { font-size: 2.5rem; } }
-@media (min-width: 1150px) { .section-header h2 { font-size: 3rem; } }
-
-
-
-
-
-@keyframes llamarAtencion {
-    0%, 30%, 50%, 80%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-    10% {
-    transform: scale(1.05);
-  }
-      20% {
-    transform: scale(1);
-  }
-    30% {
-    transform: scale(1.02);
-  }
-      80% {
-    transform: scale(1);
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===== Páginas de detalle de campaña (subpáginas) ===== */
-.campaign-detail { max-width: 48rem; }
-.campaign-detail h1 { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; }
-@media (min-width: 640px) { .campaign-detail h1 { font-size: 2.5rem; } }
-.campaign-detail h2 { font-size: 1.4rem; font-weight: 700; margin: 2rem 0 0.75rem; }
-.campaign-detail .lead { color: var(--muted-foreground); font-size: 1.1rem; }
-.campaign-back {
+.legal-list li { margin-bottom: 0.4rem; }
+.legal-page a { color: var(--primary); text-decoration: underline; }
+.legal-updated { font-size: 0.85rem; color: var(--muted-foreground); font-style: italic; }
+.legal-back {
   display: inline-block;
   margin-bottom: 1.5rem;
   font-weight: 600;
@@ -387,39 +373,9 @@ h1, h2, h3, .logo-text, .why-title {
   color: var(--primary);
   text-decoration: none;
 }
-.campaign-back:hover { text-decoration: underline; }
-.campaign-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.campaign-list li {
-  position: relative;
-  padding-left: 1.75rem;
-  color: var(--foreground);
-}
-.campaign-list li::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 0.45em;
-  width: 0.6rem; height: 0.6rem;
-  border-radius: 9999px;
-  background: var(--primary);
-}
+.legal-back:hover { text-decoration: underline; }
 
 
-
-
-
-
-
-.imagen-plan {
- border-radius: 5rem;
- margin-bottom: 2rem;
-}
 
 
 
@@ -545,35 +501,3 @@ h1, h2, h3, .logo-text, .why-title {
   color: black;
   transform: scale(1.1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
