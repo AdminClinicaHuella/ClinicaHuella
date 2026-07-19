@@ -522,7 +522,7 @@ h3,
 }
 
 .lead {
-  color: var(--muted-foreground);
+  color: black;
 }
 
 .hero-buttons {
@@ -537,7 +537,7 @@ h3,
 /* --- Padding de secciones --- */
 .hero,
 .servicios {
-  padding-top: 1rem;
+  padding-top: 3rem;
   padding-bottom: 2rem;
 }
 
@@ -786,6 +786,7 @@ h3,
   gap: 1rem;
   justify-content: center;
   text-align: center;
+  color: var(--foregroundd);
 }
 
 .about-copy h2 {
@@ -1091,11 +1092,12 @@ h3,
 }
 
 .team-modal-photo {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 9999px;
+  width: 10rem;
+  height: 12rem;
+  border-radius: 10px;
   object-fit: cover;
   margin: 0 auto 1rem;
+  border: 2px solid var(--border);
 }
 
 .team-modal-panel {
