@@ -514,37 +514,23 @@
           data-en=" facilities, waiting rooms and consultation rooms adapted to the needs of each species, plus a room specially designed to say goodbye to our companions with intimacy, respect and love.">
           , salas de espera y consultas adaptadas a las necesidades de cada especie, más una sala especialmente diseñada para despedirnos de nuestros compañeros desde la intimidad, el respeto y cariño.</span>
         </p>
-        
-           <!--
-        <div class="values-grid">
-
-          <div class="value-card">
-            <p class="value-title" data-es="Cuidado" data-en="Care">Cuidado</p>
-            <p class="value-desc" data-es="Trato amoroso y respetuoso con cada paciente."
-               data-en="Loving, respectful treatment for every patient.">Trato amoroso y respetuoso con cada paciente.</p>
-          </div>
-
-          <div class="value-card">
-            <p class="value-title" data-es="Confianza" data-en="Trust">Confianza</p>
-            <p class="value-desc" data-es="Transparencia en cada diagnóstico y tratamiento."
-               data-en="Transparency in every diagnosis and treatment.">Transparencia en cada diagnóstico y tratamiento.</p>
-          </div>
-
-          <div class="value-card">
-            <p class="value-title" data-es="Experiencia" data-en="Experience">Experiencia</p>
-            <p class="value-desc" data-es="Profesionales con 10 años de experiencia."
-               data-en="Professionals with 10 years of experience.">Profesionales certificados con años de práctica.</p>
-          </div>
-
-        </div> -->
-
 
       </div>
     </div>
 
 
+
+
+
+
+
+
+
+
+
 <!-- ===================== GALERÍA ===================== -->
       <div class="gallery" data-gallery>
+
         <button class="gallery-arrow gallery-prev" aria-label="Anterior" data-gallery-prev>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
         </button>
@@ -576,16 +562,51 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </button>
       </div>
+
+      <div class="gallery-dots" data-gallery-dots aria-hidden="true"></div>
+
+      <div class="gallery-full-link-wrap">
+        <a class="btn btn-outline btn-full-gallery" href="galeria/galeria.html"
+          data-es="Ver galería completa" data-en="View full gallery">Ver galería completa</a>
+      </div>
+
+
   </section>
 
 
-  <!-- GALERÍA Lightbox (visor de imagen ampliada). No tocar. -->
+<!-- GALERÍA Lightbox (visor de imagen ampliada). No tocar. -->
   <div class="lightbox" data-lightbox hidden>
     <button class="lightbox-close" aria-label="Cerrar" data-lightbox-close>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
+    <button class="lightbox-arrow lightbox-prev" aria-label="Anterior" data-lightbox-prev>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
     <img class="lightbox-img" src="" alt="" data-lightbox-img />
+    <button class="lightbox-arrow lightbox-next" aria-label="Siguiente" data-lightbox-next>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -611,8 +632,9 @@
 
       <div class="team-grid">
 
-        <button type="button" class="team-card-trigger" data-team-target="victor">
-          <div class="team-card">
+      <button type="button" class="team-card-trigger" data-team-target="victor">
+        <div class="team-card">
+          <div class="team-card-main">
             <div class="team-photo">
               <img src="assets/vRecortada.png" alt="Víctor Zomeño">
             </div>
@@ -622,10 +644,31 @@
                 Veterinario y cofundador Clínica Huella</p>
             </div>
           </div>
-        </button>
+          <div class="team-bio-short">
+            <p data-es="Desde que era niño tuvo claro que quería dedicar su vida al cuidado de los animales. Esa vocación le llevó a estudiar Veterinaria y, desde entonces, ha tenido la suerte de dedicarse a una profesión que le apasiona cada día."
+               data-en="Since he was a child, he knew he wanted to dedicate his life to caring for animals. That calling led him to study Veterinary Medicine, and ever since, he has been fortunate to work in a profession he is passionate about every day.">
+               Desde que era niño tuvo claro que quería dedicar su vida al cuidado de los animales. Esa vocación le llevó a estudiar Veterinaria y, desde entonces, ha tenido la suerte de dedicarse a una profesión que le apasiona cada día.</p>
+ 
+            <p data-es="A lo largo de su trayectoria ha trabajado en clínica de pequeños animales, cirugía y atención de urgencias, además de asumir responsabilidades de dirección y gestión de equipos."
+               data-en="Throughout his career he has worked in small animal clinics, surgery and emergency care, as well as taking on leadership and team management responsibilities.">
+               A lo largo de su trayectoria ha trabajado en clínica de pequeños animales, cirugía y atención de urgencias, además de asumir responsabilidades de dirección y gestión de equipos.</p>
+          
+            <p data-es="Estas experiencias le han permitido..."
+               data-en="These experiences have given him...">
+               Estas experiencias le han permitido...</p>
+          
+            <p><span class="btn-ver-mas" data-es="Ver más" data-en="See more">Ver más</span></p>
 
-        <button type="button" class="team-card-trigger" data-team-target="cristina">
-          <div class="team-card">
+
+            </div>
+ 
+        </div>
+      </button>
+
+
+      <button type="button" class="team-card-trigger" data-team-target="cristina">
+        <div class="team-card">
+          <div class="team-card-main">
             <div class="team-photo">
               <img src="assets/cRecortada.png" alt="Cristina Listón">
             </div>
@@ -635,13 +678,27 @@
                 Enfermera veterinaria y cofundadora Clínica Huella</p>
             </div>
           </div>
-        </button>
+          <div class="team-bio-short">
+            <p data-es="Cuenta con más de siete años de experiencia en clínicas y hospitales veterinarios de referencia, donde ha trabajado en distintas áreas de la medicina veterinaria."
+               data-en="She has over seven years of experience in leading veterinary clinics and hospitals, where she has worked in different areas of veterinary medicine.">
+               Cuenta con más de siete años de experiencia en clínicas y hospitales veterinarios de referencia, donde ha trabajado en distintas áreas de la medicina veterinaria.</p>
+
+            <p><span data-es="Sus principales intereses son la oncología, las urgencias y el manejo " data-en="Her main interests are oncology, emergency care and ">Sus principales intereses son la oncología, las urgencias y el manejo </span><strong data-es="Cat Friendly" data-en="Cat Friendly">Cat Friendly</strong><span data-es=", siempre con el objetivo de ofrecer una atención que minimice el estrés y favorezca el bienestar de cada paciente." data-en=" handling, always with the aim of providing care that minimises stress and supports the well-being of every patient.">, siempre con el objetivo de ofrecer una atención que minimice el estrés y favorezca el bienestar de cada paciente.</span></p>
+          
+            <p><span data-es="Además..." data-en="She also...">Además...</span></p>
+
+            <p><span class="btn-ver-mas" data-es="Ver más" data-en="See more">Ver más</span></p>
+
+          </div>
+
+        </div>
+      </button>
 
       </div>
     </div>
   </section>
 
-<!-- Modal de equipo (biografía extensa). No tocar la estructura. -->
+<!-- Modal de equipo (biografía extensa) -->
   <div class="team-modal" data-team-modal hidden>
     <div class="team-modal-card">
       <button class="team-modal-close" aria-label="Cerrar" data-team-modal-close>
