@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://clinicahuella.com/galeria.html" />
+  <link rel="canonical" href="https://clinicahuella.com/galeria/galeria.html" />
   <title>Galería | HUELLA Clínica Veterinaria</title>
   <meta name="description" content="Conoce nuestras instalaciones: sala de espera, consultas y quirófano de Clínica Veterinaria HUELLA en Turís, Valencia." />
+  <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Clínica Huella" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+  <meta name="theme-color" content="#788538" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="../common.css" />
   <link rel="stylesheet" href="styles_galeria.css" />
 </head>
 
@@ -20,7 +28,7 @@
     <div class="container header-inner">
       <a href="https://www.clinicahuella.com" class="logo">
         <span class="logo-mark" aria-hidden="true">
-          <img class="nav-logo" src="../assets/LogotipoHuella_Horizontal_Negro@2x.png">
+          <img class="nav-logo" src="../assets/LogotipoHuella_Horizontal_Negro@2x.png" alt="Logotipo de clínica veterinaria Huella">
         </span>
         <!--<span class="logo-text" data-es="Clínica veterinaria HUELLA" data-en="HUELLA veterinary clinic"  >Clínica veterinaria HUELLA</span>-->
       </a>
@@ -87,7 +95,7 @@
          data-en="Take a look at our facilities.">Conoce nuestras instalaciones.</p>
 
 
-      <div class="full-gallery-grid" style="margin-top: 2.5rem;">
+      <div class="full-gallery-grid">
 
         <button class="full-gallery-item">
           <img src="../assets/RenderRecepcion.jpg" alt="Instalaciones HUELLA" loading="lazy" />
@@ -118,7 +126,7 @@
 
 
   <!-- Lightbox (visor de imagen ampliada). No tocar. -->
-  <div class="lightbox" data-lightbox hidden>
+  <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Visor de imágenes" hidden>
     <button class="lightbox-close" aria-label="Cerrar" data-lightbox-close>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
@@ -152,8 +160,8 @@
         <p class="footer-heading" data-es="Síguenos en Instagram" data-en="Follow us on Instagram">Síguenos</p>
         <div class="social btn">
 
-          <a href="https://www.instagram.com/huella_cv/?hl=es" Target="_blank" aria-label="Instagram">
-            <img src="../assets/Instagram_Glyph_White.png">
+          <a href="https://www.instagram.com/huella_cv/?hl=es" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="../assets/Instagram_Glyph_White.png" loading="lazy" alt="Instagram de la clínica veterinaria HUELLA">
           </a>
 
         </div>
@@ -172,7 +180,7 @@
       <div>
         <a href="https://clinicahuella.com">
           <div class="footer-logo-container">
-            <img class="footer-logo" src="../assets/LogotipoHuella_Vertical_Verde@2x.png">
+            <img class="footer-logo" src="../assets/LogotipoHuella_Vertical_Verde@2x.png" loading="lazy" alt="Logotipo vertical de la clínica veterinaria HUELLA">
           </div>
           <p class="footer-tagline"
             data-es="Av. Bautista Soler y Crespo 49, Turís, 46389 Valencia"

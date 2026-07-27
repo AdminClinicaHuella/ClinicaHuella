@@ -127,8 +127,8 @@ function setupForm() {
       status.className = "form-status error";
     } finally {
       status.hidden = false;
-      submitBtn.disabled = false;
       submitBtn.textContent = m.send;
+      checkFormValid();
       setTimeout(() => { status.hidden = true; }, 5000);
     }
   });

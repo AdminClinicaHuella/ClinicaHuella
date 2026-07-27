@@ -15,8 +15,11 @@
 
   <title>Clínica veterinaria Huella | Veterinarios en Turís, Valencia</title>
   <meta name="description" content="Clínica Veterinaria Huella en Turís, Valencia: medicina preventiva, cirugía, diagnóstico por imagen y laboratorio propio. Atención cercana para perros y gatos." />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
   <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <meta name="theme-color" content="#788538" />
   <meta name="apple-mobile-web-app-title" content="Clínica Huella" />
   <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
@@ -39,6 +42,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" />
   
+  <link rel="stylesheet" href="common.css" />
   <link rel="stylesheet" href="styles.css" />
 
 
@@ -154,7 +158,7 @@
         <button id="lang-toggle" class="lang-btn" aria-label="Cambiar idioma / Toggle language">
           <span id="lang-es">ES</span><span class="lang-sep">/</span><span id="lang-en">EN</span>
         </button>
-        <a href="#contacto" class="btn btn-primary btn-cta" data-es="Contacta con nosotros" data-en="Contact us">Pedir Cita</a>
+        <a href="#contacto" class="btn btn-primary btn-cta" data-es="Contacta con nosotros" data-en="Contact us">Contacta con nosotros</a>
         <button id="menu-toggle" class="menu-btn" aria-label="Menú" aria-expanded="false">
           <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
           <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -170,7 +174,7 @@
       <!--<a href="#equipo"  class="nav-button"  data-es="Equipo"         data-en="Team">Equipo</a>-->
       <!--<a href="#contacto" class="nav-button" data-es="Contacto"       data-en="Contact">Contacto</a>-->
       <a href="#llegar" class="nav-button"   data-es="Cómo llegar"    data-en="Get directions">Cómo llegar</a>
-      <a href="#contacto" class="btn btn-primary nav-mobile-cta" data-es="Contacta con nosotros" data-en="Contact us">Pedir cita</a>
+      <a href="#contacto" class="btn btn-primary nav-mobile-cta" data-es="Contacta con nosotros" data-en="Contact us">Contacta con nosotros</a>
 
     </nav>
   </header>
@@ -190,11 +194,11 @@
     <div class="container hero-copy">
       
       <span class="eyebrow">
-        <span data-es="Cuidamos de quienes dejan" data-en="We take care of those who leave a mark">Cuidamos de quienes dejan HUELLA</span>
+        <span data-es="Cuidamos de quienes dejan HUELLA" data-en="We take care of those who leave a mark">Cuidamos de quienes dejan HUELLA</span>
       </span>
 
       <h1 class="hero-logo-h1">
-        <img class="hero-logo" src="assets/LogotipoHuella_Horizontal_Verde@3x.png" alt="HUELLA Clínica Veterinaria en Turís, Valencia">
+        <img class="hero-logo" src="assets/LogotipoHuella_Horizontal_Verde@3x.png" fetchpriority="high" alt="HUELLA Clínica Veterinaria en Turís, Valencia">
         <span class="visually-hidden" data-es="HUELLA Clínica Veterinaria en Turís, Valencia" data-en="HUELLA Veterinary Clinic in Turís, Valencia">HUELLA Clínica Veterinaria en Turís, Valencia</span>
       </h1>
 
@@ -575,7 +579,7 @@
 
 
 <!-- GALERÍA Lightbox (visor de imagen ampliada). No tocar. -->
-  <div class="lightbox" data-lightbox hidden>
+  <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Visor de imágenes" hidden>
     <button class="lightbox-close" aria-label="Cerrar" data-lightbox-close>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
@@ -636,7 +640,7 @@
         <div class="team-card">
           <div class="team-card-main">
             <div class="team-photo">
-              <img src="assets/vRecortada.png" alt="Víctor Zomeño">
+              <img src="assets/vRecortada.webp" loading="lazy" alt="Víctor Zomeño">
             </div>
             <div class="team-info">
               <h3>Víctor Zomeño</h3>
@@ -670,7 +674,7 @@
         <div class="team-card">
           <div class="team-card-main">
             <div class="team-photo">
-              <img src="assets/cRecortada.png" alt="Cristina Listón">
+              <img src="assets/cRecortada.webp" loading="lazy" alt="Cristina Listón">
             </div>
             <div class="team-info">
               <h3>Cristina Listón</h3>
@@ -699,14 +703,14 @@
   </section>
 
 <!-- Modal de equipo (biografía extensa) -->
-  <div class="team-modal" data-team-modal hidden>
+  <div class="team-modal" data-team-modal role="dialog" aria-modal="true" aria-label="Biografía del equipo" hidden>
     <div class="team-modal-card">
       <button class="team-modal-close" aria-label="Cerrar" data-team-modal-close>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
 
       <div class="team-modal-panel" data-team-panel="victor">
-        <img class="team-modal-photo" src="assets/vRecortada.png" alt="Víctor Zomeño">
+        <img class="team-modal-photo" src="assets/vRecortada.webp" alt="Víctor Zomeño">
         <h3>Víctor Zomeño</h3>
         <p class="team-modal-role"
            data-es="Veterinario y cofundador Clínica Huella"
@@ -735,7 +739,7 @@
       </div>
 
       <div class="team-modal-panel" data-team-panel="cristina" hidden>
-        <img class="team-modal-photo" src="assets/cRecortada.png" alt="Cristina Listón">
+        <img class="team-modal-photo" src="assets/cRecortada.webp" alt="Cristina Listón">
         <h3>Cristina Listón</h3>
         <p class="team-modal-role"
            data-es="Enfermera veterinaria y cofundadora Clínica Huella"
@@ -799,7 +803,7 @@
               <ellipse cx="19.5" cy="9" rx="2" ry="2.5"/>
             </svg>          
           </div>
-          <h3 data-es="Cat Friendly" data-en="Cat Friendly">Cat Frienldy</h3>
+          <h3 data-es="Cat Friendly" data-en="Cat Friendly">Cat Friendly</h3>
           <p data-es="Instalaciones y manejo adaptados a sus necesidades." data-en="Facilities and handling adapted to their needs.">Instalaciones y manejo adaptados a sus necesidades.</p>
         </div>
 
@@ -942,7 +946,7 @@
             </label>
 
             <button type="submit" id="contact-submit" class="btn btn-primary btn-block"
-                    data-es="Enviar" data-en="Send">Enviar mensaje</button>
+                    data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</button>
             <p id="contact-status" class="form-status" hidden></p>
           </form>
         </div>
@@ -995,8 +999,8 @@
 
           <div id="llegar">
             
-            <a class="map-link" href="https://www.google.com/maps/place/Huella+Cl%C3%ADnica+Veterinaria/@39.3925584,-0.704417,77m/data=!3m1!1e3!4m6!3m5!1s0xd60fd2c46ced475:0xc6f75f079b7dee36!8m2!3d39.3926446!4d-0.7044894!16s%2Fg%2F11zfns4nxr!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-              <img class="googleMapsScreenshot" src="assets/GoogleMapsScreenshotEntrance2.jpg">
+            <a class="map-link" href="https://www.google.com/maps/place/Huella+Cl%C3%ADnica+Veterinaria/@39.3925584,-0.704417,77m/data=!3m1!1e3!4m6!3m5!1s0xd60fd2c46ced475:0xc6f75f079b7dee36!8m2!3d39.3926446!4d-0.7044894!16s%2Fg%2F11zfns4nxr!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+              <img class="googleMapsScreenshot" src="assets/GoogleMapsScreenshotEntrance2.jpg" loading="lazy" alt="Entrada de la clínica veterinaria HUELLA vista en Google Maps">
               <span class="masInfo-badge" data-es="Ver en Google Maps" data-en="View on Google Maps">Ver en Google Maps</span>
             </a>
             </div>
@@ -1008,8 +1012,6 @@
       <div class="map-embed">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d513.3973884665712!2d-0.704417!3d39.3925584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60fd2c46ced475%3A0xc6f75f079b7dee36!2sHuella%20Cl%C3%ADnica%20Veterinaria!5e1!3m2!1ses!2ses!4v1782744550409!5m2!1ses!2ses"
-          width="100%" height="100%"
-          style="border:0;"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -1043,8 +1045,8 @@
         <p class="footer-heading" data-es="Síguenos en Instagram" data-en="Follow us on Instagram">Síguenos</p>
         <div class="social btn">
 
-          <a href="https://www.instagram.com/huella_cv/?hl=es" Target="_blank" aria-label="Instagram">
-            <img src="assets/Instagram_Glyph_White.png">
+          <a href="https://www.instagram.com/huella_cv/?hl=es" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="assets/Instagram_Glyph_White.png" loading="lazy" alt="Instagram de la clínica veterinaria HUELLA">
           </a>
 
         </div>
@@ -1063,7 +1065,7 @@
       <div>
         <a href="https://clinicahuella.com">
           <div class="footer-logo-container">
-            <img class="footer-logo" src="assets/LogotipoHuella_Vertical_Verde@2x.png">
+            <img class="footer-logo" src="assets/LogotipoHuella_Vertical_Verde@2x.png" loading="lazy" alt="Logotipo vertical de la clínica veterinaria HUELLA">
           </div>
           <p class="footer-tagline"
             data-es="Av. Bautista Soler y Crespo 49, Turís, 46389 Valencia"
