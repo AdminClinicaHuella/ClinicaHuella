@@ -1,69 +1,99 @@
 /* =========================================================
-   Huella · lógica de la web (vanilla JS)
-   - Cambio de idioma ES/EN (lee data-es / data-en del HTML)
-   - Menú móvil
-   - Formulario de contacto
-   No genera HTML: todo el contenido está escrito en index.html
+   HUELLA · Lógica de la web (JavaScript sin dependencias)
+
+   El sitio es estático y bilingüe por RUTA, no por JavaScript:
+     · Español  →  /            /galeria/   /planes/...   /legal/...
+     · Inglés   →  /en/         /en/gallery/  /en/plans/...  /en/legal/...
+   Cada página es HTML completo en su idioma, así que aquí NO hay
+   ninguna lógica de traducción: solo los textos que cambian de
+   estado en tiempo de ejecución (el formulario) necesitan idioma,
+   y se deduce del atributo lang del <html>.
+
+   Todos los bloques comprueban si sus elementos existen, de modo que
+   este mismo fichero puede cargarse en cualquier página del sitio.
    ========================================================= */
 
-// ---- CONFIG: pega aquí tu endpoint de Formspree (Fase 2) ----
-// Mientras esté vacío, el formulario funciona en "modo demo"
-// (muestra el mensaje de éxito sin enviar nada).
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvznjdvb"; // ej: "https://formspree.io/f/xxxxxxx"
-// -------------------------------------------------------------
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvznjdvb";
 
-const STORAGE_KEY = "huella-lang";
+/* Idioma de la página actual, leído del <html lang="..."> */
+const LANG = document.documentElement.lang.toLowerCase().startsWith("en") ? "en" : "es";
 
-// Textos del formulario (los únicos que el JS necesita conocer,
-// porque cambian de estado: "Enviando...", "Enviado", error).
-const formMessages = {
+/* Únicos textos que el JS necesita conocer: los que cambian de estado */
+const TEXTS = {
   es: {
     send: "Enviar mensaje",
     sending: "Enviando...",
     sent: "¡Mensaje enviado! Te contactaremos pronto.",
     error: "Hubo un problema al enviar. Inténtalo de nuevo o llámanos.",
+    consent: "Debes aceptar la política de privacidad.",
+    photo: "Foto",
   },
   en: {
     send: "Send message",
     sending: "Sending...",
     sent: "Message sent! We'll be in touch soon.",
     error: "Something went wrong. Please try again or call us.",
+    consent: "You must accept the privacy policy.",
+    photo: "Photo",
   },
-};
+}[LANG];
 
-let currentLang = "es";
+/* ---------- Utilidades ---------- */
 
-/* ---------- Aplicar idioma ---------- */
-function applyLang(lang) {
-  currentLang = lang;
+/* Mantiene el foco dentro de un diálogo abierto (accesibilidad) */
+function trapFocus(container, event) {
+  if (event.key !== "Tab") return;
+  const focusables = container.querySelectorAll(
+    'a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex="-1"])'
+  );
+  const visible = Array.from(focusables).filter((el) => el.offsetParent !== null);
+  if (visible.length === 0) return;
 
-  // Cada elemento con data-es/data-en muestra el texto del idioma activo
-  document.querySelectorAll("[data-es]").forEach((el) => {
-    const val = el.getAttribute("data-" + lang);
-    if (val !== null) el.textContent = val;
+  const first = visible[0];
+  const last = visible[visible.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
+/* ---------- Menú móvil ---------- */
+function setupMenu() {
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-mobile");
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    toggle.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
   });
 
-  // Estado visual del botón de idioma (solo si existe)
-  const esBtn = document.getElementById("lang-es");
-  const enBtn = document.getElementById("lang-en");
-  if (esBtn) esBtn.classList.toggle("active", lang === "es");
-  if (enBtn) enBtn.classList.toggle("active", lang === "en");
-
-  // Atributo lang del documento
-  document.documentElement.lang = lang;
-
-  localStorage.setItem(STORAGE_KEY, lang);
+  // Al pulsar cualquier enlace, el menú se cierra
+  nav.querySelectorAll("a").forEach((link) =>
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      toggle.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    })
+  );
 }
 
 /* ---------- Formulario de contacto ---------- */
 function setupForm() {
   const form = document.getElementById("contact-form");
+  if (!form) return;
+
   const status = document.getElementById("contact-status");
   const submitBtn = document.getElementById("contact-submit");
+  const consent = document.getElementById("f-consent");
 
-  // --- Feedback visual: activar el botón solo si el formulario está completo ---
+  // El botón solo se activa cuando el formulario está completo
   function checkFormValid() {
-    const consent = document.getElementById("f-consent");
     const ok =
       form.name.value.trim() &&
       form.email.value.trim() &&
@@ -72,31 +102,26 @@ function setupForm() {
     submitBtn.disabled = !ok;
   }
 
-  // Revisa cada vez que el usuario escribe o marca la casilla
   form.addEventListener("input", checkFormValid);
   form.addEventListener("change", checkFormValid);
-
-  // Estado inicial: desactivado al cargar
   checkFormValid();
-
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const m = formMessages[currentLang];
+
     const data = {
       name: form.name.value.trim(),
       email: form.email.value.trim(),
       phone: form.phone.value.trim(),
       message: form.message.value.trim(),
+      // Para saber en qué idioma escribió quien nos contacta
+      language: LANG,
     };
 
     if (!data.name || !data.email || !data.message) return;
 
-    const consent = document.getElementById("f-consent");
     if (consent && !consent.checked) {
-      status.textContent = currentLang === "es"
-        ? "Debes aceptar la política de privacidad."
-        : "You must accept the privacy policy.";
+      status.textContent = TEXTS.consent;
       status.className = "form-status error";
       status.hidden = false;
       return;
@@ -104,61 +129,32 @@ function setupForm() {
 
     status.hidden = true;
     submitBtn.disabled = true;
-    submitBtn.textContent = m.sending;
+    submitBtn.textContent = TEXTS.sending;
 
     try {
-      if (FORMSPREE_ENDPOINT) {
-        const res = await fetch(FORMSPREE_ENDPOINT, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify(data),
-        });
-        if (!res.ok) throw new Error("Network response not ok");
-      } else {
-        // Modo demo: sin endpoint configurado todavía
-        await new Promise((r) => setTimeout(r, 600));
-      }
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Network response not ok");
 
       form.reset();
-      status.textContent = m.sent;
+      status.textContent = TEXTS.sent;
       status.className = "form-status success";
     } catch (err) {
-      status.textContent = m.error;
+      status.textContent = TEXTS.error;
       status.className = "form-status error";
     } finally {
       status.hidden = false;
-      submitBtn.textContent = m.send;
+      submitBtn.textContent = TEXTS.send;
       checkFormValid();
       setTimeout(() => { status.hidden = true; }, 5000);
     }
   });
 }
 
-/* ---------- Menú móvil ---------- */
-function setupMenu() {
-  const toggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav-mobile");
-  toggle.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
-    toggle.classList.toggle("open", open);
-    toggle.setAttribute("aria-expanded", String(open));
-  });
-  nav.querySelectorAll("a").forEach((a) =>
-    a.addEventListener("click", () => {
-      nav.classList.remove("open");
-      toggle.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
-    })
-  );
-}
-
-
-
-
-
-
-
-/* ---------- Galería de la home (carrusel + puntos) ---------- */
+/* ---------- Carrusel de la portada (flechas + puntos) ---------- */
 function setupGallery() {
   const gallery = document.querySelector("[data-gallery]");
   if (!gallery) return;
@@ -189,7 +185,7 @@ function setupGallery() {
       const dot = document.createElement("button");
       dot.type = "button";
       dot.className = "gallery-dot";
-      dot.setAttribute("aria-label", "Foto " + (i + 1));
+      dot.setAttribute("aria-label", TEXTS.photo + " " + (i + 1));
       dot.addEventListener("click", () => { index = i; update(); });
       dotsWrap.appendChild(dot);
     }
@@ -211,9 +207,8 @@ function setupGallery() {
       lastDotCount = dotCount;
     }
 
-    const item = items[0];
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    const step = item.getBoundingClientRect().width + gap;
+    const step = items[0].getBoundingClientRect().width + gap;
     track.style.transform = `translateX(${-index * step}px)`;
 
     prevBtn.disabled = index <= 0;
@@ -223,16 +218,22 @@ function setupGallery() {
 
   prevBtn.addEventListener("click", () => { index = Math.max(0, index - 1); update(); });
   nextBtn.addEventListener("click", () => { index = Math.min(maxIndex(), index + 1); update(); });
-  window.addEventListener("resize", update);
+
+  // Un solo recálculo por ciclo de repintado al redimensionar
+  let resizePending = false;
+  window.addEventListener("resize", () => {
+    if (resizePending) return;
+    resizePending = true;
+    requestAnimationFrame(() => {
+      resizePending = false;
+      update();
+    });
+  });
 
   update();
 }
 
-
-
-
-
-/* ---------- Lightbox (usado por la galería de home y la página completa) ---------- */
+/* ---------- Lightbox (portada y galería completa) ---------- */
 function setupLightbox() {
   const lightbox = document.querySelector("[data-lightbox]");
   const lightboxImg = document.querySelector("[data-lightbox-img]");
@@ -243,6 +244,7 @@ function setupLightbox() {
   if (!lightbox || !lightboxImg || items.length === 0) return;
 
   let current = 0;
+  let lastFocused = null;
 
   function show(i) {
     // Navegación circular: después de la última vuelve a la primera, y viceversa
@@ -252,19 +254,22 @@ function setupLightbox() {
     lightboxImg.alt = img.alt;
   }
 
-  items.forEach((btn, i) => {
-    btn.addEventListener("click", () => {
-      show(i);
-      lightbox.hidden = false;
-      document.body.style.overflow = "hidden";
-    });
-  });
+  function openLightbox(i) {
+    lastFocused = document.activeElement;
+    show(i);
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+    lightboxClose.focus();
+  }
 
   function closeLightbox() {
     lightbox.hidden = true;
     lightboxImg.src = "";
     document.body.style.overflow = "";
+    if (lastFocused) lastFocused.focus();
   }
+
+  items.forEach((btn, i) => btn.addEventListener("click", () => openLightbox(i)));
 
   if (prevBtn) prevBtn.addEventListener("click", () => show(current - 1));
   if (nextBtn) nextBtn.addEventListener("click", () => show(current + 1));
@@ -273,77 +278,114 @@ function setupLightbox() {
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) closeLightbox();
   });
+
   document.addEventListener("keydown", (e) => {
     if (lightbox.hidden) return;
     if (e.key === "Escape") closeLightbox();
     if (e.key === "ArrowLeft") show(current - 1);
     if (e.key === "ArrowRight") show(current + 1);
+    trapFocus(lightbox, e);
   });
 }
 
+/* ---------- Mapa de Google bajo consentimiento ----------
+   El iframe está dentro de un <template>, que el navegador no descarga:
+   hasta que alguien pulsa "Cargar mapa" no hay ninguna petición a Google
+   ni cookies de terceros (LSSI art. 22.2 / RGPD).
+   La decisión se recuerda en localStorage (no es una cookie y no sale del
+   navegador) para no volver a preguntar en cada visita. */
+function setupMapConsent() {
+  const wrap = document.querySelector("[data-map-embed]");
+  if (!wrap) return;
 
+  const template = wrap.querySelector("[data-map-iframe]");
+  const loadBtn = wrap.querySelector("[data-map-load]");
+  if (!template || !loadBtn) return;
 
+  const STORAGE_KEY = "huella-maps-consent";
 
+  // El modo incógnito de algunos navegadores lanza al tocar localStorage
+  function readConsent() {
+    try {
+      return localStorage.getItem(STORAGE_KEY) === "1";
+    } catch (err) {
+      return false;
+    }
+  }
 
+  function saveConsent() {
+    try {
+      localStorage.setItem(STORAGE_KEY, "1");
+    } catch (err) {
+      /* sin almacenamiento disponible: se preguntará en la próxima visita */
+    }
+  }
+
+  function loadMap() {
+    wrap.replaceChildren(template.content.cloneNode(true));
+  }
+
+  loadBtn.addEventListener("click", () => {
+    saveConsent();
+    loadMap();
+  });
+
+  if (readConsent()) loadMap();
+}
 
 /* ---------- Modal de equipo (biografía extensa) ---------- */
 function setupTeamModal() {
   const modal = document.querySelector("[data-team-modal]");
   if (!modal) return;
 
+  const card = modal.querySelector(".team-modal-card");
   const closeBtn = modal.querySelector("[data-team-modal-close]");
   const panels = modal.querySelectorAll("[data-team-panel]");
   const triggers = document.querySelectorAll("[data-team-target]");
+  let lastFocused = null;
 
   triggers.forEach((trigger) => {
     trigger.addEventListener("click", () => {
       const target = trigger.getAttribute("data-team-target");
-      panels.forEach((p) => {
-        p.hidden = p.getAttribute("data-team-panel") !== target;
+      panels.forEach((panel) => {
+        panel.hidden = panel.getAttribute("data-team-panel") !== target;
       });
+      lastFocused = trigger;
       modal.hidden = false;
       document.body.style.overflow = "hidden";
+      if (card) card.scrollTop = 0;
+      closeBtn.focus();
     });
   });
 
   function closeModal() {
     modal.hidden = true;
     document.body.style.overflow = "";
+    if (lastFocused) lastFocused.focus();
   }
+
   closeBtn.addEventListener("click", closeModal);
   modal.addEventListener("click", (e) => {
     if (e.target === modal) closeModal();
   });
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !modal.hidden) closeModal();
+    if (modal.hidden) return;
+    if (e.key === "Escape") closeModal();
+    trapFocus(modal, e);
   });
 }
 
-
-/* ---------- Init ---------- */
+/* ---------- Arranque ---------- */
 document.addEventListener("DOMContentLoaded", () => {
-  // Año del footer (solo si existe)
+  // Año del pie de página (el HTML ya trae un año de reserva por si falla el JS)
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Idioma: leer guardado y aplicarlo (heredado de la página principal)
-  const stored = localStorage.getItem(STORAGE_KEY);
-  applyLang(stored === "en" || stored === "es" ? stored : "es");
-
-  // Botón de idioma (solo si existe)
-  const langToggle = document.getElementById("lang-toggle");
-  if (langToggle) {
-    langToggle.addEventListener("click", () => {
-      applyLang(currentLang === "es" ? "en" : "es");
-    });
-  }
-
-  // Menú y formulario solo si están presentes en la página
-  if (document.getElementById("menu-toggle")) setupMenu();
-  if (document.getElementById("contact-form")) setupForm();
-
-
+  setupMenu();
+  setupForm();
   setupGallery();
   setupLightbox();
+  setupMapConsent();
   setupTeamModal();
 });

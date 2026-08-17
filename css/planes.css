@@ -1,0 +1,82 @@
+
+
+.planes {
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+.campaign-detail {
+  max-width: 48rem;
+}
+
+.campaign-detail h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.campaign-detail h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 2rem 0 0.75rem;
+}
+
+.campaign-detail .lead {
+  color: var(--muted-foreground);
+  font-size: 1.1rem;
+}
+
+.campaign-back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.campaign-back:hover {
+  text-decoration: underline;
+}
+
+.imagen-plan {
+  border-radius: 5rem;
+  margin-bottom: 2rem;
+}
+
+.campaign-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.campaign-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  color: var(--foreground);
+}
+
+.campaign-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 9999px;
+  background: var(--primary);
+}
+
+/* ============================================================================
+   A partir de 640px
+   ============================================================================ */
+@media (min-width: 640px) {
+
+  .campaign-detail h1 {
+    font-size: 2.5rem;
+  }
+
+}
