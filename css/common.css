@@ -511,6 +511,13 @@ h3,
   aspect-ratio: 1 / 1;
 }
 
+.imagen-PEPAC {
+  padding-top: 1rem;
+  width: 350px;
+  margin: 0 auto;
+}
+
+
 .footer-bottom {
   position: relative;
   margin-top: 2.5rem;

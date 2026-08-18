@@ -924,8 +924,7 @@
   border: 0;
 }
 
-/* Aviso previo al mapa: ocupa exactamente el mismo hueco que el iframe,
-   así al cargarlo no se mueve nada de la página. */
+
 .map-consent {
   display: flex;
   flex-direction: column;
