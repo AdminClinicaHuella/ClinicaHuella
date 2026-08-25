@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Página no encontrada | HUELLA Clínica Veterinaria</title>
+  <meta name="description" content="La página que buscas no existe o ha cambiado de dirección." />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <meta name="theme-color" content="#788538" />
+
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/common.css" />
+
+  <style>
+    .error-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1rem;
+      min-height: 70vh;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .error-logo {
+      width: min(18rem, 70%);
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .error-code {
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 12vw, 6rem);
+      font-weight: 800;
+      line-height: 1;
+      color: var(--primary);
+    }
+
+    .error-title {
+      font-size: clamp(1.25rem, 4vw, 1.75rem);
+      font-weight: 700;
+    }
+
+    .error-text {
+      max-width: 34rem;
+      color: var(--muted-foreground);
+    }
+
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container error-page">
+    <a href="/" aria-label="HUELLA Clínica Veterinaria · Inicio">
+      <img class="error-logo" src="/assets/LogotipoHuella_Horizontal_Verde@3x.png" width="1502" height="455"
+           alt="HUELLA Clínica Veterinaria en Turís, Valencia">
+    </a>
+
+    <p class="error-code">404</p>
+    <h1 class="error-title">Esta página se ha perdido</h1>
+    <p class="error-text">
+      La dirección que has abierto no existe o ha cambiado. Puedes volver al inicio
+      o escribirnos y te ayudamos con lo que necesites.
+    </p>
+
+    <div class="error-actions">
+      <a href="/" class="btn btn-primary">Volver al inicio</a>
+      <a href="/#contacto" class="btn btn-outline">Contacta con nosotros</a>
+    </div>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/34711224853" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+    <img src="/assets/Android_App_Icon_2026.png" width="1024" height="1024" alt="" />
+  </a>
+
+</body>
+
+</html>
