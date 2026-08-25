@@ -93,10 +93,14 @@
 }
 
 /* --- Padding de secciones --- */
-.hero,
-.servicios {
+.hero {
   padding-top: 3rem;
   padding-bottom: 2rem;
+}
+
+.servicios {
+  padding-top: 3rem;
+  padding-bottom: 6rem;
 }
 
 .planes {
