@@ -478,9 +478,15 @@ h3,
 }
 
 .imagen-PEPAC {
-  padding-top: 1rem;
   width: 350px;
-  margin: 0 auto;
+  height: auto;
+  margin: 1rem auto 0;
+  border-radius: 10px;
+}
+
+.legal-page .imagen-PEPAC {
+  width: min(480px, 100%);
+  margin-top: 2rem;
 }
 
 .footer-bottom {
