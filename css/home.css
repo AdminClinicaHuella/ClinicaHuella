@@ -1079,3 +1079,124 @@
   }
 
 }
+
+/* ============================================================================
+   AVISO DE INAUGURACIÓN — TEMPORAL
+   Para retirarlo: borrar este bloque, el <div class="aviso"> de index.html y
+   de en/index.html, y la llamada a setupAviso() en js/app.js.
+   ============================================================================ */
+.aviso {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.72);
+  padding: 1rem;
+}
+
+.aviso[hidden] {
+  display: none;
+}
+
+.aviso-card {
+  position: relative;
+  display: grid;
+  width: 100%;
+  max-width: 26rem;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: var(--card);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: teamFadeIn 0.35s ease;
+}
+
+.aviso-cartel {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--cream);
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.aviso-cuerpo {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.aviso-fecha {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.aviso-cuerpo h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.aviso-cuerpo p + p {
+  margin-top: 0.75rem;
+}
+
+.aviso-cuerpo .aviso-texto {
+  font-size: 0.925rem;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+}
+
+.aviso-cta {
+  margin-top: 1.25rem;
+}
+
+.aviso-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  height: 2.25rem;
+  width: 2.25rem;
+  border: none;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--foreground);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.aviso-close:hover {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.aviso-close svg {
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+@media (min-width: 760px) {
+  .aviso-card {
+    grid-template-columns: auto minmax(0, 35rem);
+    align-items: center;
+    width: fit-content;
+    max-width: 95vw;
+  }
+
+  .aviso-cartel {
+    width: auto;
+    height: min(86vh, 44rem);
+    object-fit: contain;
+    border-radius: 1.5rem 0 0 1.5rem;
+  }
+
+  .aviso-cuerpo {
+    padding: 2rem;
+  }
+}

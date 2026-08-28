@@ -376,6 +376,55 @@ function setupTeamModal() {
   });
 }
 
+/* ---------- Aviso de inauguración (temporal) ---------- */
+function setupAviso() {
+  const aviso = document.querySelector("[data-aviso]");
+  if (!aviso) return;
+
+  const STORAGE_KEY = "huella-aviso-inauguracion";
+  const cierres = aviso.querySelectorAll("[data-aviso-close]");
+  const primerCierre = aviso.querySelector(".aviso-close");
+
+  // Algunos navegadores en modo incógnito lanzan al tocar sessionStorage
+  function yaVisto() {
+    try {
+      return sessionStorage.getItem(STORAGE_KEY) === "1";
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function recordar() {
+    try {
+      sessionStorage.setItem(STORAGE_KEY, "1");
+    } catch (e) {
+      /* sin persistencia: se volverá a mostrar, no es grave */
+    }
+  }
+
+  function cerrar() {
+    aviso.hidden = true;
+    document.body.style.overflow = "";
+    recordar();
+  }
+
+  if (yaVisto()) return;
+
+  aviso.hidden = false;
+  document.body.style.overflow = "hidden";
+  if (primerCierre) primerCierre.focus();
+
+  cierres.forEach((el) => el.addEventListener("click", cerrar));
+  aviso.addEventListener("click", (e) => {
+    if (e.target === aviso) cerrar();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (aviso.hidden) return;
+    if (e.key === "Escape") cerrar();
+    trapFocus(aviso, e);
+  });
+}
+
 /* ---------- Arranque ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   // Año del pie de página (el HTML ya trae un año de reserva por si falla el JS)
@@ -388,4 +437,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setupLightbox();
   setupMapConsent();
   setupTeamModal();
+  setupAviso();
 });
