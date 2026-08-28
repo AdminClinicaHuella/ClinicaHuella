@@ -1105,7 +1105,7 @@
   display: grid;
   width: 100%;
   max-width: 26rem;
-  max-height: 92vh;
+  max-height: 80vh;
   overflow-y: auto;
   background: var(--card);
   border-radius: 1.5rem;
@@ -1183,10 +1183,11 @@
 
 @media (min-width: 760px) {
   .aviso-card {
-    grid-template-columns: auto minmax(0, 35rem);
+    grid-template-columns: auto minmax(0, 30rem);
     align-items: center;
     width: fit-content;
     max-width: 95vw;
+    max-height: 92vh;
   }
 
   .aviso-cartel {
