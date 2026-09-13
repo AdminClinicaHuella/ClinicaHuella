@@ -1,7 +1,7 @@
 
 
 .gallery-page {
-  max-width: 60rem;
+  max-width: 90rem;
   margin-bottom: 6rem;
   min-height: 700px;
 }
@@ -34,7 +34,7 @@
 /* Rejilla de la galería completa */
 .full-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 2.5rem;
 }
@@ -45,7 +45,7 @@
   border: 2px solid var(--border);
   border-radius: 1rem;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   cursor: pointer;
   background: none;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -53,7 +53,7 @@
 
 .full-gallery-item:hover {
   border-color: var(--primary);
-  transform: scale(1.08);
+  transform: scale(1.03);
   z-index: 2;
   box-shadow: var(--shadow-soft);
 }

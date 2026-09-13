@@ -170,8 +170,7 @@ function setupGallery() {
   // Cuántas fotos se ven a la vez según el ancho (coincide con el CSS: 639 / 900)
   function perView() {
     if (window.innerWidth <= 639) return 1;
-    if (window.innerWidth <= 900) return 2;
-    return 3;
+    return 2;
   }
 
   function maxIndex() {
