@@ -19,16 +19,13 @@
 }
 
 .gallery-back {
+  margin-top:2rem;
   display: inline-block;
   margin-bottom: 1.5rem;
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--primary);
   text-decoration: none;
-}
-
-.gallery-back:hover {
-  text-decoration: underline;
 }
 
 /* Rejilla de la galería completa */

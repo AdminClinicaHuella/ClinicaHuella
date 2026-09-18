@@ -23,17 +23,17 @@ const TEXTS = {
   es: {
     send: "Enviar mensaje",
     sending: "Enviando...",
-    sent: "¡Mensaje enviado! Te contactaremos pronto.",
     error: "Hubo un problema al enviar. Inténtalo de nuevo o llámanos.",
     consent: "Debes aceptar la política de privacidad.",
+    thanksUrl: "/gracias/",
     photo: "Foto",
   },
   en: {
     send: "Send message",
     sending: "Sending...",
-    sent: "Message sent! We'll be in touch soon.",
     error: "Something went wrong. Please try again or call us.",
     consent: "You must accept the privacy policy.",
+    thanksUrl: "/en/thank-you/",
     photo: "Photo",
   },
 }[LANG];
@@ -139,13 +139,12 @@ function setupForm() {
       });
       if (!res.ok) throw new Error("Network response not ok");
 
-      form.reset();
-      status.textContent = TEXTS.sent;
-      status.className = "form-status success";
+      // Enviado: se sale de esta página hacia la de agradecimiento
+      window.location.assign(TEXTS.thanksUrl);
     } catch (err) {
+      // Solo el error se muestra aquí; el éxito ya ha navegado fuera
       status.textContent = TEXTS.error;
       status.className = "form-status error";
-    } finally {
       status.hidden = false;
       submitBtn.textContent = TEXTS.send;
       checkFormValid();

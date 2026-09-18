@@ -1,0 +1,34 @@
+h1 {
+    margin-bottom: 1rem;
+}
+
+.gracias {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.gracias-icono {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 auto 1.25rem;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    background: color-mix(in oklab, var(--primary) 14%, transparent);
+    color: var(--primary);
+}
+
+.gracias-texto {
+    margin-bottom: 1rem;
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.gracias-volver {
+    display: inline-block;
+    color: var(--primary);
+    margin-top: 3rem;
+}
+

@@ -29,7 +29,6 @@
 
 .legal-page a {
   color: var(--primary);
-  text-decoration: underline;
 }
 
 .legal-list {
@@ -51,10 +50,6 @@
   font-size: 0.9rem;
   color: var(--primary);
   text-decoration: none;
-}
-
-.legal-back:hover {
-  text-decoration: underline;
 }
 
 /* ============================================================================
