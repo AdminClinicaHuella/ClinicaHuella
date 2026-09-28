@@ -47,6 +47,7 @@
 
   <link rel="stylesheet" href="/css/common.css" />
   <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/visita360.css" />
 
 <script type="application/ld+json">
 {
@@ -169,10 +170,6 @@
     </nav>
   </header>
 
-
-
-
-
   <!-- ===================== HERO ===================== -->
   <section id="inicio" class="hero">
     <div class="container hero-copy">
@@ -190,12 +187,11 @@
     </div>
 
     <div class="hero-buttons">
-      <a href="#servicios" class="btn btn-outline">Our services</a>
+      <a href="#sobre" class="btn btn-outline">Discover our new facilities</a>
       <a href="#contacto" class="btn btn-primary">Book appointment</a>
     </div>
 
   </section>
-
 
   <!-- ===================== SERVICES ===================== -->
   <section id="servicios" class="servicios section-primary">
@@ -277,7 +273,6 @@
     </div>
   </section>
 
-
   <!-- ===================== HEALTH PLANS ===================== -->
   <section id="planes" class="planes section-primary">
     <div class="container">
@@ -318,7 +313,6 @@
     </div>
 
   </section>
-
 
   <!-- ===================== ABOUT + GALLERY ===================== -->
   <section id="sobre" class="sobre section-tint">
@@ -397,7 +391,6 @@
             <img src="/assets/Hospitalizados08-2026.webp" width="2048" height="1153" alt="Resting room for cats" loading="lazy" />
           </button>
 
-
 </div>
       </div>
 
@@ -412,8 +405,28 @@
       <a class="btn btn-outline btn-full-gallery" href="/en/gallery/">View full gallery</a>
     </div>
 
-  </section>
+      <section id="visita-virtual" class="tour-section container" data-tour data-tour-title="Huella virtual tour" aria-labelledby="tour-title">
+        <div class="tour-heading">
+          <h2 id="tour-title">Step inside Huella</h2>
+          <p>Tour our new facilities with a 360° view</p>
+        </div>
+        <div class="tour-stage" data-tour-stage>
+          <a class="tour-poster" data-tour-start href="/en/virtual-tour/" aria-controls="tour-viewer">
+            <img src="/assets/visita360-portada.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="View of the reception in the Huella virtual tour">
+            <span class="tour-poster-copy">
+              <span class="tour-start-label">Start the 360° tour</span>
+              <span class="tour-poster-note">Look around and choose where to go</span>
+            </span>
+          </a>
+          <dialog class="tour-dialog" data-tour-dialog>
+            <div class="tour-shell" id="tour-viewer" data-tour-shell hidden>
+              <div class="tour-frame-slot" data-tour-slot></div>
+            </div>
+          </dialog>
+        </div>
+      </section>
 
+  </section>
 
   <!-- Lightbox: enlarged image viewer, shared with the gallery page -->
   <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
@@ -428,7 +441,6 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
     </button>
   </div>
-
 
   <!-- ===================== TEAM ===================== -->
   <section id="equipo" class="equipo section-tint">
@@ -519,7 +531,6 @@
     </div>
   </div>
 
-
   <!-- ===================== WHY CHOOSE US ===================== -->
   <section class="porqueElegirnos section-primary">
     <div class="wave-top" aria-hidden="true">
@@ -584,7 +595,6 @@
       </svg>
     </div>
   </section>
-
 
   <!-- ===================== CONTACT ===================== -->
   <section id="contacto" class="contacto section-tint">
@@ -695,7 +705,6 @@
         </div>
       </div>
 
-
       <div class="map-embed" data-map-embed>
         <div class="map-consent" data-map-consent>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-google-maps">
@@ -725,7 +734,6 @@
 
     </div>
   </section>
-
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
@@ -783,6 +791,7 @@
   </a>
 
   <script src="/js/app.js"></script>
+  <script defer src="/js/visita360.js"></script>
   <script type="module" src="/js/menu-icon.js"></script>
   <script type="module" src="/js/why-icons.js"></script>
 </body>

@@ -1,0 +1,284 @@
+{
+  "title": "Huella · Visita 360°",
+  "version": "13-puntos-20260928",
+  "firstScene": "recepcion",
+  "scenes": [
+    {
+      "id": "recepcion",
+      "number": 1,
+      "title": "Recepción",
+      "group": "recepcion",
+      "yaw": 0.20872331006095343,
+      "image": "/visita-virtual/panoramas/recepcion.jpg?v=625093442e8c",
+      "links": [
+        {
+          "target": "espera-perros",
+          "yaw": 118.81079374297306,
+          "pitch": -24
+        },
+        {
+          "target": "espera-gatos",
+          "yaw": -13.240519915187187,
+          "pitch": -24
+        },
+        {
+          "target": "pasillo-principal",
+          "yaw": 5.9315269249197655,
+          "pitch": -22.45821556487072
+        }
+      ]
+    },
+    {
+      "id": "espera-perros",
+      "number": 2,
+      "title": "Espera de perros",
+      "group": "recepcion",
+      "yaw": 85.55677211686985,
+      "image": "/visita-virtual/panoramas/espera-perros.jpg?v=11a1d9cb9cf5",
+      "links": [
+        {
+          "target": "recepcion",
+          "yaw": -61.189206257026946,
+          "pitch": -24
+        }
+      ]
+    },
+    {
+      "id": "espera-gatos",
+      "number": 3,
+      "title": "Espera de gatos",
+      "group": "recepcion",
+      "yaw": -11.48999767522719,
+      "image": "/visita-virtual/panoramas/espera-gatos.jpg?v=40c8238b7204",
+      "links": [
+        {
+          "target": "recepcion",
+          "yaw": 166.75948008481282,
+          "pitch": -24
+        },
+        {
+          "target": "pasillo-principal",
+          "yaw": 69.44395478041649,
+          "pitch": -24
+        },
+        {
+          "target": "consulta-felina",
+          "yaw": -13.803401449917883,
+          "pitch": -24
+        }
+      ]
+    },
+    {
+      "id": "pasillo-principal",
+      "number": 4,
+      "title": "Pasillo principal",
+      "group": "pasillo",
+      "yaw": 0.21053658596118488,
+      "image": "/visita-virtual/panoramas/pasillo-principal.jpg?v=522bc43dd78f",
+      "links": [
+        {
+          "target": "recepcion",
+          "yaw": -174.06847307508022,
+          "pitch": -22.45821556487072
+        },
+        {
+          "target": "espera-gatos",
+          "yaw": -110.55604521958354,
+          "pitch": -24
+        },
+        {
+          "target": "pasillo-distribuidor",
+          "yaw": -0.5787255656077498,
+          "pitch": -17.911654027062013
+        }
+      ]
+    },
+    {
+      "id": "pasillo-distribuidor",
+      "number": 5,
+      "title": "Pasillo distribuidor",
+      "group": "pasillo",
+      "yaw": -89.84310003886709,
+      "image": "/visita-virtual/panoramas/pasillo-distribuidor.jpg?v=dca15f1ad1b2",
+      "links": [
+        {
+          "target": "pasillo-principal",
+          "yaw": 179.42127443439225,
+          "pitch": -17.911654027062013
+        },
+        {
+          "target": "rayos",
+          "yaw": 81.97112252434788,
+          "pitch": -24
+        },
+        {
+          "target": "prequirofano",
+          "yaw": 31.276804846676267,
+          "pitch": -24
+        },
+        {
+          "target": "pasillo-consultas",
+          "yaw": -88.05851360908561,
+          "pitch": -24
+        }
+      ]
+    },
+    {
+      "id": "rayos",
+      "number": 6,
+      "title": "Sala de rayos",
+      "group": "clinica",
+      "yaw": 143.04303717706978,
+      "image": "/visita-virtual/panoramas/rayos.jpg?v=e24aa29a94b8",
+      "links": [
+        {
+          "target": "pasillo-distribuidor",
+          "yaw": -78.29438275412059,
+          "pitch": -24
+        }
+      ]
+    },
+    {
+      "id": "prequirofano",
+      "number": 7,
+      "title": "Prequirófano",
+      "group": "clinica",
+      "yaw": -106.05004694545501,
+      "image": "/visita-virtual/panoramas/prequirofano.jpg?v=ba5450d4e43d",
+      "links": [
+        {
+          "target": "pasillo-distribuidor",
+          "yaw": -132.91530808792106,
+          "pitch": -10.950792351153357
+        },
+        {
+          "target": "sala-quirurgica",
+          "yaw": -78.52620559251649,
+          "pitch": -11.661130198562498
+        }
+      ]
+    },
+    {
+      "id": "sala-quirurgica",
+      "number": 8,
+      "title": "Sala quirúrgica",
+      "group": "clinica",
+      "yaw": -125.28277881848882,
+      "image": "/visita-virtual/panoramas/sala-quirurgica.jpg?v=ddbcf1fbae68",
+      "links": [
+        {
+          "target": "prequirofano",
+          "yaw": 69.66338186461822,
+          "pitch": -24
+        }
+      ]
+    },
+    {
+      "id": "pasillo-consultas",
+      "number": 9,
+      "title": "Pasillo de consultas",
+      "group": "pasillo",
+      "yaw": -118.36212545616479,
+      "image": "/visita-virtual/panoramas/pasillo-consultas.jpg?v=05d1fbe62805",
+      "links": [
+        {
+          "target": "pasillo-distribuidor",
+          "yaw": 91.94148639091442,
+          "pitch": -24
+        },
+        {
+          "target": "consulta-canina",
+          "yaw": -118.55429050233471,
+          "pitch": -17.472177286858635
+        },
+        {
+          "target": "consulta-felina",
+          "yaw": 126.32420403502672,
+          "pitch": -21.309485344263244
+        },
+        {
+          "target": "pasillo-office",
+          "yaw": -90.49391689861876,
+          "pitch": -15.421615569674607
+        }
+      ]
+    },
+    {
+      "id": "consulta-canina",
+      "number": 10,
+      "title": "Consulta canina",
+      "group": "consultas",
+      "yaw": -157.65357299466638,
+      "image": "/visita-virtual/panoramas/consulta-canina.jpg?v=6f35392538b4",
+      "links": [
+        {
+          "target": "pasillo-consultas",
+          "yaw": 14.3068018629568,
+          "pitch": -24
+        }
+      ]
+    },
+    {
+      "id": "consulta-felina",
+      "number": 11,
+      "title": "Consulta felina",
+      "group": "consultas",
+      "yaw": -138.5595124169548,
+      "image": "/visita-virtual/panoramas/consulta-felina.jpg?v=f2bd9f01632e",
+      "links": [
+        {
+          "target": "espera-gatos",
+          "yaw": 169.83915719580145,
+          "pitch": -14.808042103060913
+        },
+        {
+          "target": "pasillo-consultas",
+          "yaw": 3.8145388880049196,
+          "pitch": -24
+        }
+      ]
+    },
+    {
+      "id": "pasillo-office",
+      "number": 12,
+      "title": "Pasillo office",
+      "group": "pasillo",
+      "yaw": -128.59154658291789,
+      "image": "/visita-virtual/panoramas/pasillo-office.jpg?v=218bfeb0b569",
+      "links": [
+        {
+          "target": "pasillo-consultas",
+          "yaw": 89.50608310138124,
+          "pitch": -15.421615569674607
+        },
+        {
+          "target": "despedida",
+          "yaw": -128.45204945378208,
+          "pitch": -23.426189418654996
+        }
+      ]
+    },
+    {
+      "id": "despedida",
+      "number": 13,
+      "title": "Sala de despedida",
+      "group": "consultas",
+      "yaw": 147.9127157830089,
+      "image": "/visita-virtual/panoramas/despedida.jpg?v=b7a02b5c6e47",
+      "links": [
+        {
+          "target": "pasillo-office",
+          "yaw": -25.897937912225256,
+          "pitch": -24
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    "Baño",
+    "Almacén",
+    "Office",
+    "Sala del arcón",
+    "Hospitalización"
+  ]
+}

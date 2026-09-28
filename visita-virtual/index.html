@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#303c25" />
+  <meta name="description"
+    content="Explora la clínica veterinaria Huella en 360°. Mira alrededor y pulsa los puntos para entrar en cada estancia." />
+  <title>Huella · Visita 360°</title>
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23303c25'/%3E%3Cg fill='%23e2e7b6'%3E%3Cellipse cx='16' cy='22' rx='8' ry='6'/%3E%3Cellipse cx='7' cy='12' rx='3' ry='4'/%3E%3Cellipse cx='15' cy='8' rx='3' ry='4'/%3E%3Cellipse cx='24' cy='12' rx='3' ry='4'/%3E%3C/g%3E%3C/svg%3E" />
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/visita-virtual/vendor/pannellum.css" />
+  <link rel="stylesheet" href="/visita-virtual/style.css" />
+  <script defer src="/visita-virtual/vendor/pannellum.js"></script>
+  <script defer src="/visita-virtual/app.js"></script>
+  <link rel="canonical" href="https://clinicahuella.com/visita-virtual/" />
+  <link rel="alternate" hreflang="es" href="https://clinicahuella.com/visita-virtual/" />
+  <link rel="alternate" hreflang="en" href="https://clinicahuella.com/en/virtual-tour/" />
+  <link rel="stylesheet" href="/visita-virtual/integration.css" />
+  <script defer src="/visita-virtual/integration.js"></script>
+</head>
+
+<body>
+  <main id="experience" aria-label="Visita panorámica de la clínica Huella">
+    <div id="panorama" tabindex="0"
+      aria-label="Vista 360 grados. Arrastra para mirar. Pulsa los puntos para cambiar de posición."></div>
+    <header class="masthead">
+      <nav aria-label="Opciones de la visita">
+        <button id="roomsButton" class="pill" aria-controls="roomsPanel" aria-expanded="false">
+          Estancias
+          <span aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 9l6 6l6 -6" />
+            </svg>
+          </span>
+        </button>
+        <button id="fullscreenButton" class="round" aria-label="Pantalla completa">
+          <svg class="icono-ampliar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 4l4 0l0 4" /><path d="M14 10l6 -6" />
+            <path d="M8 20l-4 0l0 -4" /><path d="M4 20l6 -6" />
+            <path d="M16 20l4 0l0 -4" /><path d="M14 14l6 6" />
+            <path d="M8 4l-4 0l0 4" /><path d="M4 4l6 6" />
+          </svg>
+          <svg class="icono-reducir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden>
+            <path d="M5 9l4 0l0 -4" /><path d="M3 3l6 6" />
+            <path d="M5 15l4 0l0 4" /><path d="M3 21l6 -6" />
+            <path d="M19 9l-4 0l0 -4" /><path d="M15 9l6 -6" />
+            <path d="M19 15l-4 0l0 4" /><path d="M15 15l6 6" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <div class="location">
+      <h1 id="roomTitle">La clínica Huella</h1>
+    </div>
+    <section id="roomsPanel" class="rooms-panel" aria-label="Elegir un punto de la visita" hidden>
+      <div class="panel-heading">
+        <h2>Recorre la clínica</h2>
+        <button id="closeRooms" class="round" aria-label="Cerrar estancias">
+          ×
+        </button>
+      </div>
+      <div id="roomList"></div>
+    </section>
+    <div id="loading" class="loading" role="status">
+      <img class="loading-brand" src="/assets/LogotipoHuella_Horizontal_Blanco@2x.png" alt="Huella Clínica Veterinaria" width="1596" height="582"><span id="loadingText">Preparando la vista…</span><span class="loader"
+        aria-hidden="true"></span>
+    </div>
+    <section id="error" class="error-card" role="alert" hidden>
+      <h2>No se ha podido cargar esta vista</h2>
+      <p>Comprueba la conexión y vuelve a intentarlo.</p>
+      <button id="retryButton" class="primary">Volver a intentar</button>
+    </section>
+    <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+    <a class="website-back" href="/#visita-virtual"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6l6 6" /></svg>Volver a la web</a>
+  </main>
+</body>
+
+</html>

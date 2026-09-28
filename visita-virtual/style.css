@@ -1,0 +1,429 @@
+/* Paleta heredada de la web (css/common.css).
+   --primary #788538 · --foreground #172c1c · --background #fefaef */
+:root {
+  --tour-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --tour-display: "Poppins", system-ui, sans-serif;
+  --tour-primary: #788538;
+  --tour-oscuro: #172c1c;
+  --tour-claro: #fefaef;
+  --tour-suave: #f4eee0;
+  --tour-activo: #e3e3ca;
+  --tour-borde: #dce0d2;
+  --tour-apagado: #57685a;
+  --tour-acento: #9aa84a;
+  --tour-acento-claro: #c3d183;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: var(--tour-sans);
+  color: #fff;
+  background: var(--tour-oscuro);
+}
+button {
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+button,
+a {
+  touch-action: manipulation;
+}
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--tour-acento);
+  outline-offset: 4px;
+}
+[hidden] {
+  display: none !important;
+}
+#experience {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+#panorama {
+  position: absolute;
+  inset: 0;
+  background: var(--tour-oscuro);
+}
+.masthead {
+  position: absolute;
+  z-index: 4;
+  inset: 0 0 auto;
+  padding: 27px 32px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  pointer-events: none;
+}
+.masthead > * {
+  pointer-events: auto;
+}
+nav {
+  display: flex;
+  gap: 10px;
+}
+.round,
+.pill {
+  color: white;
+  background: #172c1cd9;
+  border: 1px solid #ffffff4d;
+  backdrop-filter: blur(12px);
+  min-height: 46px;
+}
+.round {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 30px;
+  padding: 10px 19px;
+  font-size: 15px;
+}
+.pill span {
+  display: flex;
+}
+.round svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.pill svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+.round:hover:not(:disabled),
+.pill:hover {
+  background: var(--tour-primary);
+}
+.location {
+  position: absolute;
+  top: 26px;
+  left: 34px;
+  max-width: calc(100% - 300px);
+  z-index: 2;
+  pointer-events: none;
+  text-shadow: 0 2px 12px #0d1a10e0;
+}
+.location h1 {
+  font:
+    700 clamp(26px, 2.9vw, 40px)/1.15 var(--tour-display);
+  margin: 9px 0;
+}
+.rooms-panel {
+  position: absolute;
+  right: 28px;
+  top: 99px;
+  z-index: 5;
+  width: 330px;
+  max-height: calc(100dvh - 210px);
+  overflow: auto;
+  padding: 22px;
+  background: var(--tour-claro);
+  color: var(--tour-oscuro);
+  border: 1px solid var(--tour-borde);
+  border-radius: 20px;
+  box-shadow: 0 12px 55px #0d1a1044;
+}
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.panel-heading h2 {
+  font:
+    700 22px var(--tour-display);
+  margin: 0;
+}
+.panel-heading .round {
+  color: var(--tour-oscuro);
+  background: transparent;
+  border-color: #172c1c30;
+}
+.room-group {
+  font-size: 12px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 22px 10px 8px;
+  color: var(--tour-apagado);
+}
+.room-link {
+  font:
+    15px var(--tour-sans);
+  display: block;
+  width: 100%;
+  padding: 13px 12px;
+  min-height: 46px;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid #172c1c12;
+  background: none;
+  color: var(--tour-oscuro);
+  border-radius: 8px;
+}
+.room-link:hover {
+  background: var(--tour-suave);
+}
+.room-link[aria-current="location"] {
+  background: var(--tour-activo);
+  font-weight: 650;
+}
+.loading {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at 30% 10%, #55612a, #172c1c);
+  font-size: 15px;
+}
+.loading-brand {
+  display: block;
+  width: 280px;
+  max-width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+.loading.compact {
+  inset: auto 50% 40px auto;
+  transform: translateX(50%);
+  border-radius: 20px;
+  padding: 13px 22px;
+  gap: 12px;
+  flex-direction: row;
+  background: #172c1ced;
+  white-space: nowrap;
+}
+.loading.compact .loading-brand {
+  display: none;
+}
+.loader {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ffffff35;
+  border-top-color: var(--tour-acento);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.point {
+  width: 48px;
+  height: 48px;
+  background: none !important;
+  cursor: pointer !important;
+  border-radius: 50%;
+  padding: 0;
+  z-index: 2;
+}
+.point-ring {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fffffff2;
+  border: 3px solid #ffffff;
+  box-shadow: 0 3px 13px #0d1a1066;
+  transition:
+    background 0.15s,
+    transform 0.15s;
+}
+.point-ring svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--tour-primary);
+  fill: none;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.point-label {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: #fff;
+  background: #172c1ced;
+  border: 1px solid #ffffff30;
+  box-shadow: 0 2px 10px #0002;
+  border-radius: 10px;
+  padding: 7px 11px;
+  font:
+    14px/1.2 var(--tour-sans);
+  pointer-events: none;
+}
+.point:hover .point-ring,
+.point:focus-visible .point-ring {
+  background: var(--tour-acento-claro);
+  transform: scale(1.1);
+}
+.point:hover,
+.point:focus-visible {
+  z-index: 3;
+}
+.pnlm-load-box,
+.pnlm-panorama-info {
+  display: none !important;
+}
+.pnlm-error-msg {
+  font-family: var(--tour-sans);
+}
+.primary {
+  border: 0;
+  border-radius: 13px;
+  min-height: 46px;
+  padding: 12px 20px;
+  background: var(--tour-acento-claro);
+  color: var(--tour-oscuro);
+  font-weight: 650;
+}
+.error-card {
+  position: absolute;
+  z-index: 8;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(470px, 90%);
+  background: var(--tour-claro);
+  color: var(--tour-oscuro);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+.error-card h2 {
+  font:
+    700 24px var(--tour-display);
+}
+.error-card p {
+  line-height: 1.5;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+@media (max-width: 650px) {
+  .masthead {
+    padding: 20px 18px;
+  }
+  .pill {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .pill span {
+    margin-left: 8px;
+  }
+  nav {
+    gap: 7px;
+  }
+  .location {
+    top: 76px;
+    left: 22px;
+    max-width: calc(100% - 44px);
+  }
+  .location h1 {
+    font-size: 30px;
+  }
+  .rooms-panel {
+    left: 14px;
+    right: 14px;
+    top: 86px;
+    width: auto;
+    max-height: calc(100dvh - 230px);
+    padding: 18px;
+  }
+  .point-label {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+  .loading.compact {
+    bottom: 40px;
+  }
+  .point,
+  .point-ring {
+    width: 46px;
+    height: 46px;
+  }
+  .point-label {
+    top: 51px;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .masthead {
+    padding: 12px 20px;
+  }
+  .location {
+    top: 74px;
+  }
+  .location h1 {
+    font-size: 26px;
+  }
+  .rooms-panel {
+    top: 72px;
+    max-height: calc(100dvh - 90px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .point-ring {
+    transition: none;
+  }
+  .loader {
+    animation-duration: 1.5s;
+  }
+}
+
+/* Volver a la web (icono + texto) */
+.website-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--tour-sans);
+  font-weight: 600;
+}
+.website-back svg {
+  display: block;
+  width: 17px;
+  height: 17px;
+}
+
+/* Pantalla completa: la pide #experience, no el visor, para no tapar la cabecera */
+#experience:fullscreen {
+  width: 100%;
+  height: 100%;
+}
