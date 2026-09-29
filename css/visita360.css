@@ -26,6 +26,8 @@
 }
 .tour-stage {
   position: relative;
+  width: 100%;
+  min-width: 0;
   max-width: 68rem;
   margin-inline: auto;
   scroll-margin-top: 6rem;
@@ -43,6 +45,7 @@
 }
 .tour-poster {
   position: relative;
+  min-width: 0;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -73,15 +76,15 @@
   text-align: center;
   text-shadow: 0 1px 8px #14200d;
 }
-
 .tour-start-label {
-  padding: 0.95rem 1.6rem;
-  border-radius: 999px;
-  background: #788538;
-  border: 1px solid #ffffff80;
+  padding: 0.8rem 1rem;
   text-shadow: none;
-  font-size: 0.875rem;
-  font-weight: 600;
+}
+.tour-poster:hover .tour-start-label,
+.tour-poster:focus-visible .tour-start-label {
+  background-color: var(--primary);
+  color: var(--background);
+  opacity: 1;
 }
 
 .tour-poster-note {
@@ -91,7 +94,7 @@
 .tour-section a:focus-visible,
 .tour-section button:focus-visible,
 .tour-dialog button:focus-visible {
-  outline: 3px solid #a7b94d;
+  outline: 3px solid var(--primary);
   outline-offset: -5px;
 }
 .tour-shell {
@@ -160,7 +163,8 @@ body.tour-active .whatsapp-float {
   }
   .tour-stage {
     aspect-ratio: 4 / 3;
-    min-height: 19rem;
+    min-height: 0;
+    max-height: none;
   }
   .tour-poster-copy {
     padding: 1.25rem;

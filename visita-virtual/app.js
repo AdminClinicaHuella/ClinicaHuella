@@ -216,18 +216,41 @@ on("roomsButton", "click", () => {
   if (abierto) $("closeRooms")?.focus();
 });
 on("closeRooms", "click", () => closeRooms(true));
-on("fullscreenButton", "click", () => {
-  if (document.fullscreenElement) document.exitFullscreen();
-  else $("experience")?.requestFullscreen?.();
+on("fullscreenButton", "click", async () => {
+  const embedded = document.documentElement.classList.contains("tour-embedded");
+  if (embedded && document.documentElement.classList.contains("tour-expanded")) {
+    window.parent.postMessage({ type: "huella-tour-minimize" }, location.origin);
+    return;
+  }
+  if (document.fullscreenElement) {
+    await document.exitFullscreen();
+    return;
+  }
+  try {
+    if (!$("experience")?.requestFullscreen) throw new Error("Fullscreen unavailable");
+    await $("experience").requestFullscreen();
+  } catch (error) {
+    // Safari móvil y otros navegadores pueden no permitir pantalla completa en un iframe.
+    if (embedded) window.parent.postMessage({ type: "huella-tour-expand" }, location.origin);
+    else console.warn("No se pudo ampliar la visita", error);
+  }
 });
-document.addEventListener("fullscreenchange", () => {
-  const activa = !!document.fullscreenElement;
+function updateFullscreenButton() {
+  const activa = !!document.fullscreenElement || document.documentElement.classList.contains("tour-expanded");
   const boton = $("fullscreenButton");
   if (!boton) return;
   boton.setAttribute("aria-label", tourText(activa ? "Salir de pantalla completa" : "Pantalla completa"));
+  boton.setAttribute("aria-pressed", String(activa));
   // Los <svg> no tienen la propiedad .hidden de HTMLElement: hay que tocar el atributo
   boton.querySelector(".icono-ampliar").toggleAttribute("hidden", activa);
   boton.querySelector(".icono-reducir").toggleAttribute("hidden", !activa);
+}
+document.addEventListener("fullscreenchange", updateFullscreenButton);
+window.addEventListener("message", (event) => {
+  if (window.parent === window || event.origin !== location.origin || event.source !== window.parent) return;
+  if (event.data?.type !== "huella-tour-expanded") return;
+  document.documentElement.classList.toggle("tour-expanded", event.data.expanded === true);
+  updateFullscreenButton();
 });
 on("retryButton", "click", () => {
   if (viewer && pending) {

@@ -4,6 +4,7 @@
   document.documentElement.classList.add('tour-embedded');
   document.addEventListener('keydown', (event) => {
     if (event.key !== 'Escape') return;
+    if (document.fullscreenElement) return;
     if (!document.getElementById('roomsPanel').hidden) return;
     window.parent.postMessage({type:'huella-tour-close'}, location.origin);
   }, true);

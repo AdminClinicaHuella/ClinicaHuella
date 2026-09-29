@@ -1,2 +1,17 @@
-.website-back {position:absolute;z-index:4;bottom:24px;left:24px;color:white;background:#26331de6;border:1px solid #ffffff70;border-radius:999px;padding:10px 16px;font-size:13px;text-decoration:none;}
-.tour-embedded .website-back {display:none;}
+.website-back {
+    position: absolute;
+    z-index: 4;
+    bottom: 24px;
+    left: 24px;
+    color: white;
+    background: #26331de6;
+    border: 1px solid #ffffff70;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.tour-embedded .website-back {
+    display: none;
+}

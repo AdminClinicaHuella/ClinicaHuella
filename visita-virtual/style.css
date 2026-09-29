@@ -1,17 +1,18 @@
-/* Paleta heredada de la web (css/common.css).
-   --primary #788538 · --foreground #172c1c · --background #fefaef */
+/* El iframe usa los mismos colores que la paleta de css/common.css. */
 :root {
   --tour-sans: "Inter", system-ui, -apple-system, sans-serif;
   --tour-display: "Poppins", system-ui, sans-serif;
   --tour-primary: #788538;
-  --tour-oscuro: #172c1c;
-  --tour-claro: #fefaef;
-  --tour-suave: #f4eee0;
-  --tour-activo: #e3e3ca;
-  --tour-borde: #dce0d2;
-  --tour-apagado: #57685a;
-  --tour-acento: #9aa84a;
-  --tour-acento-claro: #c3d183;
+  --tour-oscuro: oklch(0.27 0.04 150);
+  --tour-claro: oklch(0.985 0.015 90);
+  --tour-card: oklch(1 0 0);
+  --tour-primary-foreground: oklch(0.99 0.01 90);
+  --tour-suave: oklch(0.95 0.02 90);
+  --tour-activo: oklch(0.94 0.04 90);
+  --tour-borde: oklch(0.9 0.02 120);
+  --tour-apagado: oklch(0.5 0.03 150);
+  --tour-acento: var(--tour-primary);
+  --tour-acento-claro: oklch(0.85 0.1 75);
 }
 * {
   box-sizing: border-box;
@@ -79,9 +80,9 @@ nav {
 }
 .round,
 .pill {
-  color: white;
-  background: #172c1cd9;
-  border: 1px solid #ffffff4d;
+  color: var(--tour-primary);
+  background: var(--tour-card);
+  border: 2px solid var(--tour-primary);
   backdrop-filter: blur(12px);
   min-height: 46px;
 }
@@ -118,6 +119,7 @@ nav {
 .round:hover:not(:disabled),
 .pill:hover {
   background: var(--tour-primary);
+  color: var(--tour-primary-foreground);
 }
 .location {
   position: absolute;
@@ -161,9 +163,13 @@ nav {
   margin: 0;
 }
 .panel-heading .round {
-  color: var(--tour-oscuro);
-  background: transparent;
-  border-color: #172c1c30;
+  color: var(--tour-primary);
+  background: var(--tour-card);
+  border-color: var(--tour-primary);
+}
+.panel-heading .round:hover {
+  background: var(--tour-primary);
+  color: var(--tour-primary-foreground);
 }
 .room-group {
   font-size: 12px;
@@ -254,8 +260,8 @@ nav {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: #fffffff2;
-  border: 3px solid #ffffff;
+  background: var(--tour-card);
+  border: 2px solid var(--tour-primary);
   box-shadow: 0 3px 13px #0d1a1066;
   transition:
     background 0.15s,
@@ -276,9 +282,9 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  color: #fff;
-  background: #172c1ced;
-  border: 1px solid #ffffff30;
+  color: var(--tour-oscuro);
+  background: var(--tour-claro);
+  border: 1px solid var(--tour-borde);
   box-shadow: 0 2px 10px #0002;
   border-radius: 10px;
   padding: 7px 11px;
@@ -288,8 +294,12 @@ nav {
 }
 .point:hover .point-ring,
 .point:focus-visible .point-ring {
-  background: var(--tour-acento-claro);
+  background: var(--tour-primary);
   transform: scale(1.1);
+}
+.point:hover .point-ring svg,
+.point:focus-visible .point-ring svg {
+  stroke: var(--tour-primary-foreground);
 }
 .point:hover,
 .point:focus-visible {
@@ -365,7 +375,7 @@ nav {
     right: 14px;
     top: 86px;
     width: auto;
-    max-height: calc(100dvh - 230px);
+    max-height: calc(100dvh - 100px);
     padding: 18px;
   }
   .point-label {
